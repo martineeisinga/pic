@@ -1,0 +1,7 @@
+<h2>Welcome <%= @user.username  %></h2>
+
+<ul>
+  <% @user.trips.each do |trip| %>
+    <li><%= trip.name %> </li>
+  <% end  %>
+</ul>
