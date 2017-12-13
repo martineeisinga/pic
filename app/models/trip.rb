@@ -1,6 +1,6 @@
 class Trip < ApplicationRecord
   belongs_to :user
-  has_one :category
+  belongs_to :category
   has_many :bookings
   has_many :saved_trips
 
