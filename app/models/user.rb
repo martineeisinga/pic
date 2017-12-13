@@ -2,6 +2,7 @@ class User < ApplicationRecord
   validates :username, presence: true
   has_many :trips, dependent: :destroy
   has_many :bookings, dependent: :destroy
+  has_many :saved_trips, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 

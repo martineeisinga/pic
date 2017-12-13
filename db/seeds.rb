@@ -47,8 +47,8 @@ puts "seeding stops"
 
   rand(0..2).times do
     booking = Booking.new(
-      check_in: "23-02-2018"
-      check_out: "23-04-2018"
+      check_in: "23-02-2018",
+      check_out: "23-04-2018",
       guests: rand(0..5)
       )
     booking.user = user
