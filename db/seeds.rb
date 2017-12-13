@@ -10,7 +10,7 @@ require 'faker'
 User.destroy_all
 Trip.destroy_all
 Booking.destroy_all
-SavedTrips.destroy_all
+SavedTrip.destroy_all
 
 categories = []
 

@@ -1,6 +1,17 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-
-<% @category.each do |category| %>
-  <%= category.name %>
+<% @categories.each do |category| %>
+  <%= link_to category.name, root_path(category: category.name) %>
 <% end %>
+
+
+<ul>
+  <% @trips.each do |trip| %>
+  <li>
+    <%= link_to trip.photo, trip_path(trip) %>
+    <h3><%= link_to trip.name, trip_path(trip) %></h3>
+    <h4><%= trip.description %></h4>
+    <p><%= trip.date %></p>
+    <p><%= trip.price_experience %></p>
+    <p><%= trip.category.name %></p>
+  </li>
+  <% end %>
+</ul>
