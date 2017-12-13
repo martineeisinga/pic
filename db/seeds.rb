@@ -30,6 +30,7 @@ madrid = Trip.create(name: "oriental", location: "madrid", description: "awesome
 puts "seeding stops"
 
 
+
 10.times do
   user = User.create(email: Faker::Internet.free_email, password: "123456", username: Faker::Name.first_name)
   user.save
@@ -58,4 +59,5 @@ puts "seeding stops"
   end
 
 end
+
 

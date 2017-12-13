@@ -2,9 +2,13 @@ source 'https://rubygems.org'
 ruby '2.3.5'
 
 
+gem 'omniauth-facebook'
+
+
 gem 'faker'
 
 gem 'jquery'
+
 
 gem 'devise'
 gem 'figaro'
