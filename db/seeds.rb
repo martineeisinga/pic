@@ -10,3 +10,6 @@ omar = User.create(email: "omar@omar.com", password: "123456", username: "omar")
 snow = Category.create(name: "snow")
 madrid = Trip.create(name: "oriental", location: "madrid", description: "awesome", price_experience: 5, user_id: omar.id, category_id: snow.id)
 puts "seeding stops"
+
+url =
+photo: ""
