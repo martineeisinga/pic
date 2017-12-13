@@ -8,6 +8,7 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
+gem 'figaro'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
