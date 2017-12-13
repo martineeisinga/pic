@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   def whitelist_user_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :photo])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:username, :photo, :photo_cache])
   end
 
 end

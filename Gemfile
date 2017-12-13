@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.3.5'
 
+
 gem 'faker'
+
+gem 'jquery'
 
 gem 'devise'
 gem 'figaro'
@@ -10,6 +13,9 @@ gem 'pg'
 gem 'puma'
 gem 'rails', '5.1.4'
 gem 'redis'
+gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
