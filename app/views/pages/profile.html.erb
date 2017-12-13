@@ -1,8 +1,49 @@
 <h2>Welcome <%= @user.username  %></h2>
+<div class="tabs">
+  <a href="#" class="tab active" data-target="shared">
+    Your shared trips
+  </a>
+  <a href="#" class="tab" data-target="saved">
+    Your saved trips
+  </a>
+</div>
 
-<ul>
-  <% @user.trips.each do |trip| %>
-    <li><%= trip.name %> </li>
-    <li><%= cl_image_tag trip.photo %></li>
-  <% end  %>
-</ul>
+<div class="container">
+  <div class="row">
+      <div class="tab-content" id="shared">
+          <% @user.trips.each do |trip| %>
+            <div class="col-xs-12 col-sm-6">
+              <div class="total-card">
+              <% if trip.photo_url.nil? %>
+                <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/200/300/?random')";>
+              <% else %>
+                <div class="card" style="background-image: url(<%= cl_image_path trip.photo%>);">
+              <% end %>
+                <div class="card-category">
+                </div>
+                <div class="card-description">
+                  <p><%= trip.bookings.count %> bookings</p>
+                </div>
+                <%= link_to '', edit_trip_path(trip), class: "card-link" %>
+              </div>
+              <h4><%= trip.name %></h4>
+              <p> <%= trip.location %> </p>
+            </div>
+          </div>
+          <% end %>
+      </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="tab-content hidden" id="saved">
+  <h3>
+    Hello goodbye
+  </h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, illum.
+  </p>
+</div>
+
