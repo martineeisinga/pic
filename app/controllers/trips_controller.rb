@@ -2,7 +2,6 @@ class TripsController < ApplicationController
   before_action :set_trip, only: [:show, :edit, :update, :destroy]
   before_action :set_user, only: [:create, :edit, :update, :destroy]
   def index
-    @trips = Trip.all
   end
 
   def show
@@ -45,7 +44,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:trip).permit(:name, :price_experience, :date, :description, :category_id)
+    params.require(:trip).permit(:name, :price_experience, :date, :description, :category_id, :photo, :photo_cache)
   end
 
   def set_user

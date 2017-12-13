@@ -3,5 +3,6 @@
 <ul>
   <% @user.trips.each do |trip| %>
     <li><%= trip.name %> </li>
+    <li><%= cl_image_tag trip.photo %></li>
   <% end  %>
 </ul>
