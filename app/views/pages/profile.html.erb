@@ -1,11 +1,16 @@
-<h2>Welcome <%= @user.username  %></h2>
-<div class="tabs">
-  <a href="#" class="tab active" data-target="shared">
-    Your shared trips
-  </a>
-  <a href="#" class="tab" data-target="saved">
-    Your saved trips
-  </a>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+      <div class="tabs">
+        <a href="#" class="tab active" data-target="shared">
+          Your shared trips
+        </a>
+        <a href="#" class="tab" data-target="saved">
+          Your saved trips
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div class="container">
@@ -22,9 +27,13 @@
                 <div class="card-category">
                 </div>
                 <div class="card-description">
-                  <p><%= trip.bookings.count %> bookings</p>
+                  <p><%= trip.bookings.count %> times booked</p>
                 </div>
-                <%= link_to '', edit_trip_path(trip), class: "card-link" %>
+                <div class="card-edit">
+                <%= link_to edit_trip_path(trip), class: "card-link" do %>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                <% end %>
+                </div>
               </div>
               <h4><%= trip.name %></h4>
               <p> <%= trip.location %> </p>

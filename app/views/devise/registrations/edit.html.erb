@@ -1,8 +1,11 @@
 
+<div class="text-center edit-user">
+  <h2>Update <%= resource_name.to_s.humanize %> details</h2>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-lg-6 col-lg-offset-3">
-    <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
@@ -23,15 +26,19 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Update" %>
+        <%= f.button :submit, "Update", class: "btn-pic"  %>
       </div>
       <% end %>
 
-      <h3>Cancel my account</h3>
+      <div class="text-center cancel">
 
-      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <h3>Delete my account</h3>
 
-      <%= link_to "Back", :back %>
+      <p>Unhappy? <%= link_to "Delete my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+      </div>
+
+      <%= link_to "Back", :back, class: "text-center"%>
 
 
     </div>
