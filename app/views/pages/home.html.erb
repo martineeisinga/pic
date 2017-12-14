@@ -12,13 +12,19 @@
 <ul>
   <% @trips.each do |trip| %>
   <li>
-    <%= link_to trip.photo, trip_path(trip) %>
+    <%= link_to trip.remote_photo_url, trip_path(trip) %>
     <h3><%= link_to trip.name, trip_path(trip) %></h3>
     <h4><%= trip.description %></h4>
     <p><%= trip.date %></p>
     <p><%= trip.price_experience %></p>
     <p><%= trip.category.name %></p>
+    
+    <%= link_to trip_path(trip) do %>
+      <p><%= cl_image_tag trip.photo %></p>
+    <% end %>
+
     <%= button_to "Save trip", trip_saved_trips_path(trip) %>
+
   </li>
   <% end %>
 </ul>
