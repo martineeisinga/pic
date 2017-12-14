@@ -8,6 +8,8 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.trip = @trip
       if @booking.save
+        saved_trip = SavedTrip.create(user: current_user, trip: @booking.trip)
+        current_user.saved_trips << saved_trip
         redirect_to profile_path
       end
   end
