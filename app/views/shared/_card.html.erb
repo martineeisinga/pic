@@ -32,11 +32,18 @@
         <p><%= trip.bookings.count %> times booked</p>
       </div>
       <% end %>
+      <% if edit_trip %>
       <div class="card-edit">
         <%= link_to edit_trip_path(trip), class: "card-link" do %>
         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         <% end %>
       </div>
+      <% else %>
+      <%= link_to trip_path(trip), class: "card-link" do %>
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <% end %>
+
+      <% end %>
     </div>
     <h4><%= trip.name %></h4>
     <p> <%= trip.description %> </p>
