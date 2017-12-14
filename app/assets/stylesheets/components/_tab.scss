@@ -1,0 +1,28 @@
+.tabs {
+  margin-top:50px;
+  border-top: 1px solid #B4C5E4;
+  font-size: 15px;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+.tabs a {
+  color: #909CC2;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+
+.tabs a {
+  &:hover, &:focus, &:active, &:visited {
+    text-decoration: none;
+  }
+}
+
+.tab.active {
+  color: #25283D;
+  border-top: 1px solid #25283D;
+  &:hover {
+    text-decoration: none;
+  }
+}

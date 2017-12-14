@@ -1,0 +1,51 @@
+<div class="total-card">
+  <div class="card-category">
+    <% if user_bio %>
+    <div class="bio">
+      <% if trip.user.photo? %>
+      <%= cl_image_tag trip.user.photo, class: "avatar" %>
+      <% else %>
+      <%= image_tag 'placeholder.png', class: "avatar" %>
+      <% end %>
+      <div class="bio-info">
+        <span style="font-weight:bold">
+          <%= trip.user.username %>
+        </span>
+        <span style="font-size: 12px">
+          <%= trip.location %>
+        </span>
+      </div>
+    </div>
+    <% else %>
+    <p>
+      <%= trip.location %>
+      </p>
+    <% end %>
+  </div>
+  <% if trip.photo_url.nil? %>
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/200/300/?random')";>
+    <% else %>
+    <div class="card" style="background-image: url(<%= cl_image_path trip.photo%>);">
+      <% end %>
+      <% if booked %>
+      <div class="card-description">
+        <p><%= trip.bookings.count %> times booked</p>
+      </div>
+      <% end %>
+      <% if edit_trip %>
+      <div class="card-edit">
+        <%= link_to edit_trip_path(trip), class: "card-link" do %>
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <% end %>
+      </div>
+      <% else %>
+      <%= link_to trip_path(trip), class: "card-link" do %>
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <% end %>
+
+      <% end %>
+    </div>
+    <h4><%= trip.name %></h4>
+    <p> <%= trip.description %> </p>
+  </div>
+</div>

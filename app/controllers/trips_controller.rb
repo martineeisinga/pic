@@ -30,7 +30,7 @@ class TripsController < ApplicationController
 
   def update
     if @trip.update(trip_params)
-      redirect_to trip_path(@trip)
+      redirect_to profile_path
     else
       render :edit
     end
