@@ -18,7 +18,7 @@
     <p><%= trip.date %></p>
     <p><%= trip.price_experience %></p>
     <p><%= trip.category.name %></p>
-    
+
     <%= link_to trip_path(trip) do %>
       <p><%= cl_image_tag trip.photo %></p>
     <% end %>
@@ -28,3 +28,5 @@
   </li>
   <% end %>
 </ul>
+
+

@@ -13,50 +13,37 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-      <div class="tab-content" id="shared">
-          <% @user.trips.each do |trip| %>
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-              <div class="total-card">
-              <% if trip.photo_url.nil? %>
-                <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/200/300/?random')";>
-              <% else %>
-                <div class="card" style="background-image: url(<%= cl_image_path trip.photo%>);">
-              <% end %>
-                <div class="card-category">
-                </div>
-                <div class="card-description">
-                  <p><%= trip.bookings.count %> times booked</p>
-                </div>
-                <div class="card-edit">
-                <%= link_to edit_trip_path(trip), class: "card-link" do %>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                <% end %>
-                </div>
-              </div>
-              <h4><%= trip.name %></h4>
-              <p> <%= trip.location %> </p>
-            </div>
-          </div>
-          <% end %>
+<div class="tab-content" id="shared">
+  <div class="container">
+    <div class="row">
+      <% @user.trips.each do |trip| %>
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <%= render partial: 'shared/card', locals: { trip: trip, booked: true } %>
+        <% end %>
       </div>
+    </div>
   </div>
-</div>
 </div>
 
 
 
 <div class="tab-content hidden" id="saved">
-  <h3>
-    Hello goodbye
-  </h3>
-<ul>
-  <% current_user.saved_trips.each do |saved_trip| %>
-    <li>
-      <%= saved_trip.trip.name %>
-    </li>
-  <% end %>
-</ul>
+
+  <div class="container">
+    <div class="row">
+      <h3 class="text-center">
+        Hello goodbye
+      </h3>
+      <% current_user.saved_trips.each do |saved_trip| %>
+      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+        <%= render partial: 'shared/card', locals: { trip: saved_trip.trip, booked: false } %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
 </div>
+
+<%= render partial: "shared/floating_button" %>
+
 

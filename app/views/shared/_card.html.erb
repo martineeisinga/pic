@@ -1,0 +1,24 @@
+<div class="total-card">
+  <div class="card-category">
+    <p><%= trip.location %></p>
+  </div>
+  <% if trip.photo_url.nil? %>
+  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/200/300/?random')";>
+    <% else %>
+    <div class="card" style="background-image: url(<%= cl_image_path trip.photo%>);">
+      <% end %>
+      <% if booked %>
+        <div class="card-description">
+          <p><%= trip.bookings.count %> times booked</p>
+        </div>
+      <% end %>
+      <div class="card-edit">
+        <%= link_to edit_trip_path(trip), class: "card-link" do %>
+        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        <% end %>
+      </div>
+    </div>
+    <h4><%= trip.name %></h4>
+    <p> <%= trip.description %> </p>
+  </div>
+</div>
