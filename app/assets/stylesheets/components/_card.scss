@@ -1,13 +1,24 @@
 .card {
   min-height: 400px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  background-size: cover !important;
   background-position: center;
   color: white;
   position: relative;
-  margin-top: 40px;
-  background-position-y: center;
+  background-repeat: no-repeat;
+  // margin-top: 40px;
   background-size: cover;
+}
+
+.card-category .bio {
+  display: flex;
+  align-items: center;
+  .avatar {
+    margin-right: 10px;
+  }
+  .bio-info {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .card-user {
   position: absolute;
@@ -17,22 +28,23 @@
   border-radius: 50%;
 }
 .card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
   font-size: 15px;
-  text-transform: uppercase;
+  margin-bottom: 15px;
 }
+
 .card-description {
   position: absolute;
-  top: 10px;
-  right: 40px;
+  bottom: 10px;
+  left: 40px;
 }
 
 .card-description p {
   font-size: 14px;
   opacity: 0.7;
   font-weight: lighter;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px
 }
 .card-link {
   position: absolute;
@@ -49,13 +61,13 @@
 }
 
 .total-card {
+  margin-top: 70px;
   p {
   overflow: hidden;
   max-height: 50px;
   position:relative;
   font-size: 15px;
   font-weight: lighter;
-  color: #495159
   }
   a {
     font-weight: bolder;
@@ -65,6 +77,11 @@
       text-decoration: none;
       color: #495159;
     }
+  }
+  h4 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-weight: 350;
   }
 }
 
