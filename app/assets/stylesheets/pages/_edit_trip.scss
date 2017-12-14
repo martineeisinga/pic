@@ -4,7 +4,19 @@
   font-weight: lighter;
   letter-spacing: 1px;
   border-bottom: 1px solid #25283D;
-  margin: 100px auto;
-  width: 25%;
+  width: 300px;
   padding-bottom: 15px;
+}
+
+
+@media(max-width: 768px) {
+  .edit-trip h1 {
+    margin: 50px auto;
+  }
+}
+
+@media(min-width: 768px) {
+  .edit-trip h1 {
+    margin: 100px auto;
+  }
 }
