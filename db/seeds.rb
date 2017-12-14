@@ -49,10 +49,10 @@ jungle = Category.create(name: "jungle")
 
 categories = [jungle, dessert, city, mountain, beach, snow]
 
-puts "seeding starts"
+puts "seeding starts..."
 omar = User.create(email: "omar@omar.com", password: "123456", username: "omar")
 madrid = Trip.create(name: "oriental", location: "madrid", description: "awesome", price_experience: 5, user_id: omar.id, category_id: snow.id)
-puts "seeding stops"
+
 
 
 10.times do
@@ -85,6 +85,8 @@ puts "seeding stops"
   end
 
 end
+
+puts "seeding stops"
 
 # trip.remote_photo_url = "adfsadfaefg"
 # trip.save
