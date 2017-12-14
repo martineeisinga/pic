@@ -2,31 +2,26 @@
   <div class="row">
     <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
       <% @categories.each do |category| %>
-        <%= link_to category.name, root_path(category: category.name) %>
+        <%= link_to root_path(category: category.name) do %>
+          <%= image_tag category.photo, class: 'category-image'%>
+        <% end %>
       <% end %>
     </div>
   </div>
 </div>
 
 
-<ul>
+<div class="container">
   <% @trips.each do |trip| %>
-  <li>
-    <%= link_to trip.remote_photo_url, trip_path(trip) %>
-    <h3><%= link_to trip.name, trip_path(trip) %></h3>
-    <h4><%= trip.description %></h4>
-    <p><%= trip.date %></p>
-    <p><%= trip.price_experience %></p>
-    <p><%= trip.category.name %></p>
-
-    <%= link_to trip_path(trip) do %>
-      <p><%= cl_image_tag trip.photo %></p>
-    <% end %>
-
-    <%= button_to "Save trip", trip_saved_trips_path(trip) %>
-
-  </li>
+        <%= link_to trip.photo, trip_path(trip) %>
+        <h3><%= link_to trip.name, trip_path(trip) %></h3>
+        <%= trip.description %>
+        <p><%= trip.date %></p>
+        <p><%= trip.price_experience %></p>
+        <%= trip.category.name %>
+        <%= button_to "Save trip", trip_saved_trips_path(trip) %>
   <% end %>
-</ul>
+</div>
+
 
 
