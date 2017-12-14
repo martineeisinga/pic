@@ -12,6 +12,7 @@
     <p><%= trip.date %></p>
     <p><%= trip.price_experience %></p>
     <p><%= trip.category.name %></p>
+    <%= button_to "Save trip", trip_saved_trips_path(trip) %>
   </li>
   <% end %>
 </ul>
