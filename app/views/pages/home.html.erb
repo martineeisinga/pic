@@ -1,6 +1,12 @@
-<% @categories.each do |category| %>
-  <%= link_to category.name, root_path(category: category.name) %>
-<% end %>
+<div class="category-container text-center">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+      <% @categories.each do |category| %>
+        <%= link_to category.name, root_path(category: category.name) %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
 <ul>
@@ -12,9 +18,13 @@
     <p><%= trip.date %></p>
     <p><%= trip.price_experience %></p>
     <p><%= trip.category.name %></p>
+    
     <%= link_to trip_path(trip) do %>
       <p><%= cl_image_tag trip.photo %></p>
     <% end %>
+
+    <%= button_to "Save trip", trip_saved_trips_path(trip) %>
+
   </li>
   <% end %>
 </ul>

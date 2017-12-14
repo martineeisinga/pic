@@ -42,8 +42,12 @@
   <h3>
     Hello goodbye
   </h3>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, illum.
-  </p>
+<ul>
+  <% current_user.saved_trips.each do |saved_trip| %>
+    <li>
+      <%= saved_trip.trip.name %>
+    </li>
+  <% end %>
+</ul>
 </div>
 

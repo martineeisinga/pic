@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :trips do
     resources :bookings, only: [:create]
+    resources :saved_trips, only: [:create, :destroy]
   end
 
 
