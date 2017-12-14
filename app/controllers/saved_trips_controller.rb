@@ -1,5 +1,5 @@
 class SavedTripsController < ApplicationController
-   def create
+  def create
     @trip = Trip.find(params[:trip_id])
     if !current_user
       redirect_to new_user_registration_path
@@ -7,8 +7,13 @@ class SavedTripsController < ApplicationController
     @saved_trip = SavedTrip.new
     @saved_trip.user = current_user
     @saved_trip.trip = @trip
-      if @saved_trip.save
-        redirect_to profile_path
-      end
+    if @saved_trip.save
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
+  end
+
+  def destroy
   end
 end
