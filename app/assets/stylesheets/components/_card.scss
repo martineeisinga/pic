@@ -8,6 +8,18 @@
   // margin-top: 40px;
   background-size: cover;
 }
+
+.card-category .bio {
+  display: flex;
+  align-items: center;
+  .avatar {
+    margin-right: 10px;
+  }
+  .bio-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .card-user {
   position: absolute;
   right: 10px;
@@ -17,6 +29,7 @@
 }
 .card-category {
   font-size: 15px;
+  margin-bottom: 15px;
 }
 
 .card-description {
