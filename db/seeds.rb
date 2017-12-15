@@ -50,10 +50,10 @@ pictures = [
   pic9,
   pic10,
   pic11,
-  pic12;
-  pic13;
-  pic14;
-  pic15;
+  pic12,
+  pic13,
+  pic14,
+  pic15,
 ]
 
 categories = []
