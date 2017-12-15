@@ -20,7 +20,7 @@ beach = Category.create(name: "beach", photo: 'ocean_1.png')
 mountain = Category.create(name: "mountain", photo: 'mountain_new.png')
 city = Category.create(name: "city", photo: 'city_8.png')
 dessert = Category.create(name: "dessert", photo: 'desert.png')
-jungle = Category.create(name: "jungle", photo: 'jungle_new.jpeg')
+jungle = Category.create(name: "jungle", photo: 'jungle_new.jpg')
 
 pic1 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241894/pic-n-travel/hotel1.jpg"
 pic2 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241894/pic-n-travel/snow.jpg"
