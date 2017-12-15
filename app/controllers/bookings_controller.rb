@@ -8,9 +8,23 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.trip = @trip
       if @booking.save
-        saved_trip = SavedTrip.create(user: current_user, trip: @booking.trip)
-        current_user.saved_trips << saved_trip
-        redirect_to profile_path
+
+        # CHECK IF BOOKED TRIP WAS ALREADY A SAVED TRIP
+         booked_trip = @booking.trip_id
+         saved_trips = []
+         current_user.saved_trips. each do |saved_trip|
+          saved_trips << saved_trip.trip_id
+         end
+
+         # MAKE NEW SAVED TRIP FOR BOOKING IF NOT ALREADY CREATED
+         if !saved_trips.include?(booked_trip)
+          saved_trip = SavedTrip.create(user: current_user, trip: @booking.trip)
+          current_user.saved_trips << saved_trip
+         end
+         redirect_to profile_path
+      else
+        flash[:alert] = "Already booked that trip"
+        render "trips/show"
       end
   end
 
