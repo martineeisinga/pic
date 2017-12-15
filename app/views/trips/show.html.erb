@@ -18,9 +18,12 @@
           <%= f.input :guests, as: :integer %>
           <%= f.button :submit, class: "btn btn-primary" %>
           <% end %>
+          <%= render "shared/flashes" %>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<%= render partial: "shared/floating_button" %>
 

@@ -32,14 +32,19 @@
     <p><%= trip.bookings.count %> times booked</p>
     </div>
   <% end %>
+
+
+
     <% if marker_booked %>
-         <% trip.bookings.each do  |booking|  %>
-            <% if booking.trip_id == trip.id %>
-              <div class="card-description">
-                 <p>Booked!</p>
-               </div>
-          <% end %>
-       <% end %>
+      <% user_trips = [] %>
+      <% current_user.bookings.each do |booking| %>
+        <% user_trips << booking.trip_id %>
+      <% end %>
+      <% if user_trips.include?(trip.id) %>
+          <div class="card-description">
+             <p>Booked!</p>
+           </div>
+      <% end %>
     <% end %>
       <% if edit_trip %>
       <div class="card-edit">
