@@ -14,5 +14,9 @@ class PagesController < ApplicationController
 
   def profile
     @user = current_user
+    @saved_trips = @user.saved_trips     # trips the user would like to make
+    @bookings = @user.bookings # Trips the user has booked and saved
+    @trips = @user.trips # trips the user has created
+
   end
 end
