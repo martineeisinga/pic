@@ -19,19 +19,28 @@
     <% else %>
     <p>
       <%= trip.location %>
-      </p>
+    </p>
     <% end %>
   </div>
   <% if trip.photo_url.nil? %>
-  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/200/300/?random')";>
-    <% else %>
+    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://picsum.photos/200/300/?random')";>
+  <% else %>
     <div class="card" style="background-image: url(<%= cl_image_path trip.photo%>);">
-      <% end %>
-      <% if booked %>
-      <div class="card-description">
-        <p><%= trip.bookings.count %> times booked</p>
-      </div>
-      <% end %>
+  <% end %>
+  <% if booked %>
+    <div class="card-description">
+    <p><%= trip.bookings.count %> times booked</p>
+    </div>
+  <% end %>
+    <% if marker_booked %>
+         <% trip.bookings.each do  |booking|  %>
+            <% if booking.trip_id == trip.id %>
+              <div class="card-description">
+                 <p>Booked!</p>
+               </div>
+          <% end %>
+       <% end %>
+    <% end %>
       <% if edit_trip %>
       <div class="card-edit">
         <%= link_to edit_trip_path(trip), class: "card-link" do %>
@@ -40,16 +49,16 @@
       </div>
       <% else %>
       <%= link_to trip_path(trip), class: "card-link" do %>
-        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-        <% end %>
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      <% end %>
 
       <% end %>
     </div>
     <% if add_save_trip %>
-      <div class="save_trip">
+    <div class="save_trip">
 
-     <%= button_to "Save trip", trip_saved_trips_path(trip) %>
-   </div>
+      <%= button_to "Save trip", trip_saved_trips_path(trip) %>
+    </div>
     <% end %>
     <h4><%= trip.name %></h4>
     <p> <%= trip.description %> </p>
