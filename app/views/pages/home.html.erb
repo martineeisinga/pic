@@ -14,7 +14,7 @@
   <div class="row">
     <% @trips.each do |trip| %>
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <%= render partial: 'shared/card', locals: { trip: trip, booked: false, user_bio: true, edit_trip:false, add_save_trip:true, marker_booked: false} %>
+      <%= render partial: 'shared/card', locals: { trip: trip, booked: false, user_bio: true, edit_trip:false, add_save_trip:true, marker_booked: false, book_trip: true} %>
       <% end %>
     </div>
   </div>
