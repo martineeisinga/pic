@@ -14,7 +14,6 @@ SavedTrip.destroy_all
 
 
 
-
 snow = Category.create(name: "snow", photo: 'snow_2.png')
 beach = Category.create(name: "beach", photo: 'ocean_1.png')
 mountain = Category.create(name: "mountain", photo: 'mountain_new.png')
@@ -37,6 +36,35 @@ pic12 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338598/jungle2_e3
 pic13 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/maledives_h4vam0.jpg"
 pic14 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/sea_ovybe7.jpg"
 pic15 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/jungle_l8bq2n.jpg"
+
+desc1 = "One of the gladdest moments of human life, methinks, is the departure upon a distant journey into unknown lands. Shaking off with one mighty effort the fetters of habit, the leaden weight of routine, the cloak of many cares and the slavery of home, man feels once more happy."
+desc2 = "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover."
+desc3 = "We live in a wonderful world that is full of beauty, charm and adventure. There is no end to the adventures we can have if only we seek them with our eyes open."
+desc4 = "He who has seen one cathedral ten times has seen something; he who has seen ten cathedrals once has seen but little; and he who has spent half an hour in each of a hundred cathedrals has seen nothing at all."
+desc5 = "I travel the world, and I’m happy to say that America is still the great melting pot – maybe a chunky stew rather than a melting pot at this point, but you know what I mean."
+desc6 = "Better far off to leave half the ruins and nine-tenths of the churches unseen and to see well the rest; to see them not once, but again and often again; to watch them, to learn them, to live with them, to love them, till they have become a part of life and life’s recollections."
+desc7 = "People who don’t travel cannot have a global view, all they see is what’s in front of them. Those people cannot accept new things because all they know is where they live."
+desc8 = "When you travel, remember that a foreign country is not designed to make you comfortable. It is designed to make its own people comfortable."
+desc9 = "In both business and personal life, I’ve always found that travel inspires me more than anything else I do. Evidence of the languages, cultures, scenery, food, and design sensibilities that I discover all over the world can be found in every piece of my jewelry."
+desc10 = "Tourists don’t know where they’ve been, travelers don’t know where they’re going."
+desc11 = "Travel has a way of stretching the mind. The stretch comes not from travel’s immediate rewards, the inevitable myriad new sights, smells and sounds, but with experiencing firsthand how others do differently what we believed to be the right and only way."
+desc12 = "You do not travel if you are afraid of the unknown, you travel for the unknown, that reveals you with yourself"
+
+
+descriptions = [
+desc1,
+desc2,
+desc3,
+desc4,
+desc5,
+desc6,
+desc7,
+desc8,
+desc9,
+desc10,
+desc11,
+desc12
+]
 
 pictures = [
   pic1,
@@ -67,7 +95,6 @@ omar = User.create(email: "omar@omar.com", password: "123456", username: "omar")
 madrid = Trip.create(name: "oriental", location: "madrid", description: "awesome", price_experience: 5, user_id: omar.id, category_id: snow.id)
 
 
-
 10.times do
   user = User.create(email: Faker::Internet.free_email, password: "123456", username: Faker::Name.first_name)
   user.save
@@ -77,7 +104,7 @@ madrid = Trip.create(name: "oriental", location: "madrid", description: "awesome
     trip = Trip.new(
       name: Faker::Name.first_name + " Hotel",
       location: Faker::Name.first_name,
-      description: Faker::Name.first_name,
+      description: descriptions.sample,
       price_experience: rand(200..1000),
       user_id: user.id,
       category_id: categories.sample.id

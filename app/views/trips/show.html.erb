@@ -1,12 +1,15 @@
 
-<div class="book-trip">
+<div class="booking-trip-page-wrapper">
 
-  <h1><%= @trip.name %></h1>
-  <h2><%= @trip.location %></h2>
+ <div class="trip-name"><%= @trip.name %></div>
+  <div class="trip-location"><%= @trip.location %></div>
 
-  <div class="card" style="background-image: url(<%= cl_image_path @trip.photo%>);">
+  <div class="trip-card-banner" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 90%,white 100%), url(<%= cl_image_path @trip.photo%>);">
+
+    <div class="trip-price">$<%= @trip.price_experience %></div>
   </div>
 
+ <div class="trip-description"><%= @trip.description %></div>
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6">
