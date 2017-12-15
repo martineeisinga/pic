@@ -19,7 +19,7 @@ beach = Category.create(name: "beach", photo: 'ocean_1.png')
 mountain = Category.create(name: "mountain", photo: 'mountain_new.png')
 city = Category.create(name: "city", photo: 'city_8.png')
 dessert = Category.create(name: "dessert", photo: 'desert.png')
-jungle = Category.create(name: "jungle", photo: 'jungle_new.jpeg')
+jungle = Category.create(name: "jungle", photo: 'jungle_new.jpg')
 
 pic1 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241894/pic-n-travel/hotel1.jpg"
 pic2 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241894/pic-n-travel/snow.jpg"
@@ -31,6 +31,11 @@ pic7 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241783/pic-n-trave
 pic8 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241783/pic-n-travel/asia.jpg"
 pic9 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241783/pic-n-travel/photo-1499952748986-01abb469a8d5.jpg"
 pic10 ="http://res.cloudinary.com/dh46jpozr/image/upload/v1513241783/pic-n-travel/syndney.jpg"
+pic11 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/winter_iuaqga.jpg"
+pic12 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338598/jungle2_e3xmnh.jpg"
+pic13 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/maledives_h4vam0.jpg"
+pic14 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/sea_ovybe7.jpg"
+pic15 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/jungle_l8bq2n.jpg"
 
 desc1 = "One of the gladdest moments of human life, methinks, is the departure upon a distant journey into unknown lands. Shaking off with one mighty effort the fetters of habit, the leaden weight of routine, the cloak of many cares and the slavery of home, man feels once more happy."
 desc2 = "Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do. So throw off the bowlines. Sail away from the safe harbor. Catch the trade winds in your sails. Explore. Dream. Discover."
@@ -71,7 +76,12 @@ pictures = [
   pic7,
   pic8,
   pic9,
-  pic10
+  pic10,
+  pic11,
+  pic12,
+  pic13,
+  pic14,
+  pic15,
 ]
 
 categories = []

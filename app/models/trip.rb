@@ -5,4 +5,6 @@ class Trip < ApplicationRecord
   has_many :saved_trips, dependent: :destroy
 
   mount_uploader :photo, PhotoUploader
+
+  validates :photo, presence: true
 end
