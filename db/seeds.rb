@@ -32,6 +32,11 @@ pic7 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241783/pic-n-trave
 pic8 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241783/pic-n-travel/asia.jpg"
 pic9 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241783/pic-n-travel/photo-1499952748986-01abb469a8d5.jpg"
 pic10 ="http://res.cloudinary.com/dh46jpozr/image/upload/v1513241783/pic-n-travel/syndney.jpg"
+pic11 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/winter_iuaqga.jpg"
+pic12 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338598/jungle2_e3xmnh.jpg"
+pic13 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/maledives_h4vam0.jpg"
+pic14 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/sea_ovybe7.jpg"
+pic15 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513338597/jungle_l8bq2n.jpg"
 
 pictures = [
   pic1,
@@ -43,7 +48,12 @@ pictures = [
   pic7,
   pic8,
   pic9,
-  pic10
+  pic10,
+  pic11,
+  pic12;
+  pic13;
+  pic14;
+  pic15;
 ]
 
 categories = []
