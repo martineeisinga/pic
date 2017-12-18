@@ -1,0 +1,27 @@
+  <h4>
+    Hotel information
+  </h4>
+  <p>
+    Name : <%= trip.hotel_name %>
+  </p>
+  <div class="trip-description">
+    <%= trip.description %>
+  </div>
+  <% if trip.activities.length > 0 %>
+    <div class="container-cards">
+      <div class="text-center">
+      <h3>
+        Activities
+      </h3>
+      </div>
+      <div class="row">
+      <div class="col-xs-12">
+      </div>
+        <% activities.each do |activity| %>
+        <div class="col-xs-12 col-lg-4">
+          <%= render partial: "activity_card", locals: { activity: activity } %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
