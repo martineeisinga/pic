@@ -33,8 +33,9 @@
   </div>
 
   <% else %>
-    <div class="trip-card-banner" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 90%,white 100%), url(<%= cl_image_path @trip.photo%>);"></div>
-      <div class="trip-price">$<%= @trip.price_experience %></div>
+    <div class="trip-card-banner" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 90%,white 100%), url(<%= cl_image_path @trip.photo%>);">
+        <div class="trip-price">$<%= @trip.price_experience %></div>
+      </div>
   <% end %>
 
 
