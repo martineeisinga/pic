@@ -18,7 +18,9 @@ class TripsController < ApplicationController
     @trip.user = @user
 
     if @trip.save
-      redirect_to trip_path(@trip)
+      redirect_to new_trip_activity_path(@trip)
+    else
+      render :new
     end
   end
 
