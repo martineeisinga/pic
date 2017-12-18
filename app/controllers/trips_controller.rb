@@ -6,6 +6,7 @@ class TripsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @activities = @trip.activities
   end
 
   def new

@@ -1,32 +1,65 @@
 
 <div class="booking-trip-page-wrapper">
-
- <div class="trip-name"><%= @trip.name %></div>
+  <div class="trip-name"><%= @trip.name %></div>
   <div class="trip-location"><%= @trip.location %></div>
+  <% if @trip.activities.length > 0 %>
+  <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel" data-interval="100000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    </ol>
 
-  <div class="trip-card-banner" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 90%,white 100%), url(<%= cl_image_path @trip.photo%>);">
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner custom-carousel-height" role="listbox">
+      <div class="item active trip-photo">
+        <%= cl_image_tag @trip.photo, class: "d-block w-100 carousel-show"%>
+        <div class="trip-price">$<%= @trip.price_experience %></div>
+      </div>
+      <div class="item">
+        <%= cl_image_tag @activities.first.photo, class: "d-block w-100 carousel-show"%>
+      </div>
+    </div>
 
-    <div class="trip-price">$<%= @trip.price_experience %></div>
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 
- <div class="trip-description"><%= @trip.description %></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6">
-        <div class="book-trip-form-wrapper text-center">
-          <%= simple_form_for [@trip, @booking], input_html: { id: "trip-form" } do |f| %>
-          <%= f.input :check_in, as: :date, html5: true  %>
-          <%= f.input :check_out, as: :date, html5: true  %>
-          <%#= f.input :guests, collection: 1..10 %>
-          <%= f.input :guests, as: :integer %>
-          <%= f.button :submit, class: "create_trip" %>
-          <% end %>
-          <%= render "shared/flashes" %>
+  <% else %>
+    <div class="trip-card-banner" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 90%,white 100%), url(<%= cl_image_path @trip.photo%>);">
+        <div class="trip-price">$<%= @trip.price_experience %></div>
+      </div>
+  <% end %>
+
+
+
+   <div class="trip-description"><%= @trip.description %></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6">
+          <div class="book-trip-form-wrapper text-center">
+            <%= simple_form_for [@trip, @booking], input_html: { id: "trip-form" } do |f| %>
+            <%= f.input :check_in, as: :date, html5: true  %>
+            <%= f.input :check_out, as: :date, html5: true  %>
+            <%= f.input :guests, as: :integer %>
+            <%= f.button :submit, class: "create_trip" %>
+            <% end %>
+            <%= render "shared/flashes" %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </div>
+
+
+
 
 <%= render partial: "shared/floating_button" %>
 
