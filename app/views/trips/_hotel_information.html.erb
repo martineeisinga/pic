@@ -15,7 +15,19 @@
       <%= trip.description %>
     </p>
   </div>
+    <% if current_user.trip_ids.include?(@trip.id) %>
+    <div class="buttons-shared text-center">
+      <%= link_to trip_path(@trip), method: :delete do %>
+        <i class="fa fa-trash-o"></i>
+      <% end %>
+       <%= link_to edit_trip_path(@trip) do %>
+        <i class="fa fa-pencil"></i>
+      <% end %>
+    </div>
+    <% end %>
 </div>
+
+
 
   <% if trip.activities.length > 0 %>
     <div class="container container-marged">

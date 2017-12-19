@@ -7,7 +7,8 @@
   opacity: 0.6;
   padding-left: 30px;
   padding-right: 30px;
-  margin-bottom: 40px
+  margin-bottom: 40px;
+  transition: all 200ms ease;
 }
 .btn-pic:hover {
   opacity: 1;
@@ -72,6 +73,41 @@
 .buttons-shared.btn-pic {
   margin-right:10px;
   margin-left:10px;
+}
+
+.buttons-shared {
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.buttons-shared i.fa {
+  color: rgb(112, 119, 132);
+  font-size: 30px;
+  padding-left:5px;
+  padding-right:5px;
+  margin-top:10px;
+}
+.btn-picn {
+  color: #7F7EFF;
+  border: 2px solid #7F7EFF;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 60px;
+  transition: all 200ms ease;
+  font-size: 15px;
+}
+.btn-picn:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: white;
+  color: #3D3A4B;
+  border: 2px solid #3D3A4B;
 }
 
 

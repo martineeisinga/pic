@@ -6,9 +6,9 @@ class PagesController < ApplicationController
 
     if params['category']
       cat = Category.where(name: params['category']).first
-      @trips = Trip.where(category_id: cat.id).order("trips.created_at desc")
+      @trips = Trip.where(category_id: cat.id).order("trips.created_at desc").paginate(page: params[:page], per_page: 20)
     else
-       @trips = Trip.all.order("trips.created_at desc")
+       @trips = Trip.all.order("trips.created_at desc").paginate(page: params[:page], per_page: 20)
      end
   end
 

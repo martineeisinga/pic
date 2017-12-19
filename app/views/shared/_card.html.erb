@@ -66,18 +66,18 @@
 
       <% end %>
     </div>
-    <% if add_save_trip %>
+    <% if add_save_trip && trip.user != current_user %>
     <div>
 
       <%= button_to "Save", trip_saved_trips_path(trip), class: "save_trip" %>
     </div>
     <% end %>
-    <% if book_trip %>
+    <% if book_trip && trip.user != current_user  %>
       <div>
         <%= link_to "Book", trip_path(trip), class: "book_trip" %>
       </div>
     <% end %>
     <h4><%= trip.name %></h4>
-    <p> <%= trip.description %> </p>
+    <p> <%= truncate trip.description, length: 100 %> </p>
   </div>
 </div>
