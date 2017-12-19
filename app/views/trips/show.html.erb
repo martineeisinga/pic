@@ -17,9 +17,9 @@
 
   <%= render partial: "hotel_information", locals: { trip: @trip, activities: @activities } %>
 
+
   <% if current_user.trip_ids.include?(@trip.id) %>
-    <div class="buttons-shared text-center">
-      <%= link_to "Edit your trip", edit_trip_path(@trip), class: "btn-pic " %>
+    <div class="text-center">
       <%= link_to "Add activity", new_trip_activity_path(@trip), class: "btn-pic " %>
     </div>
   <% else %>

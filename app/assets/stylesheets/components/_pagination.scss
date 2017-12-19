@@ -1,0 +1,18 @@
+.pagination-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    background-color: $brand-color;
+    color: white;
+    padding: 3px 5px;
+    font-weight: 500;
+  }
+  span, em {
+    background-color: #b8b6bd;
+    color: white;
+    padding: 3px 5px;
+    font-weight: 500;
+  }
+}
