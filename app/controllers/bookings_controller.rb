@@ -1,5 +1,7 @@
 class BookingsController < ApplicationController
   def create
+
+
     @trip = Trip.find(params[:trip_id])
     if !current_user
       redirect_to new_user_registration_path
@@ -21,7 +23,8 @@ class BookingsController < ApplicationController
           saved_trip = SavedTrip.create(user: current_user, trip: @booking.trip)
           current_user.saved_trips << saved_trip
          end
-         redirect_to profile_path
+         redirect_user = FlightService.new(trip: @trip, booking: @booking).call
+         redirect_to 'https://www.google.com/flights/#search;f=BCN,YJB;t=AMS,ZYA;d=2018-01-05;r=2018-01-08'
       else
         flash[:alert] = "Already booked that trip"
         render "trips/show"

@@ -6,6 +6,7 @@
         <%= f.input :check_in, as: :date, html5: true  %>
         <%= f.input :check_out, as: :date, html5: true  %>
         <%= f.input :guests, as: :integer, input_html: { class: "input-width-set", placeholder: "Input guest amount" } %>
+        <%= f.input :current_location,  input_html: { class: "input-width-set", placeholder: "Flying from?" } %>
         <%= f.button :submit, class: "create_trip" %>
         <% end %>
         <%= render "shared/flashes" %>
@@ -13,3 +14,6 @@
     </div>
   </div>
 </div>
+<!-- TODO: Change hotel to flight
+  <!-- Link to the plane website -->
+  <!--  save in database-->
