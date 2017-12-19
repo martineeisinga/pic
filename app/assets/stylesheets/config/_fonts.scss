@@ -14,3 +14,9 @@ $headers-font: "Raleway", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+@font-face {
+  font-family: 'Helvetica Neue';
+  src:  fonts-url('HelveticaNeue-Light.eot') format('eot'),
+        fonts-url('HelveticaNeue-Light.ttf') format('truetype'),
+        fonts-url('HelveticaNeue-Light.woff') format('woff');
+}
