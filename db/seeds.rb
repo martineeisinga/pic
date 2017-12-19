@@ -103,7 +103,8 @@ madrid = Trip.create(name: "oriental", location: "madrid", description: "awesome
   rand(0..5).times do
     url = pictures.sample
     trip = Trip.new(
-      name: Faker::Name.first_name + " Hotel",
+      name: Faker::Name.first_name,
+      hotel_name: Faker::Name.first_name + "Hotel",
       location: Faker::Name.first_name,
       description: descriptions.sample,
       price_experience: rand(200..1000),
