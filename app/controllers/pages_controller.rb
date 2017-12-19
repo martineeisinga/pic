@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home]
+  skip_before_action :authenticate_user!, only: [:home, :banner]
 
   def home
     @categories = Category.all
@@ -18,5 +18,8 @@ class PagesController < ApplicationController
     @bookings = @user.bookings # Trips the user has booked and saved
     @trips = @user.trips # trips the user has created
 
+  end
+
+  def banner
   end
 end
