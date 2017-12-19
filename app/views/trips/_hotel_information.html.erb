@@ -1,18 +1,26 @@
-  <h4>
-    Hotel information
-  </h4>
-  <p>
-    Name : <%= trip.hotel_name %>
-  </p>
-  <div class="trip-description">
-    <%= trip.description %>
+<div class="hotel-name">
+  <h3>
+    <%= trip.hotel_name %>
+  </h3>
+</div>
+<div class="hotel-description">
+  <div class="hotel-img">
+    <%= image_tag 'hotel.svg' %>
   </div>
+  <div class="hotel-details">
+    <h5>
+      <%= trip.hotel_name %>
+    </h5>
+    <p>
+      <%= trip.description %>
+    </p>
+  </div>
+</div>
+
   <% if trip.activities.length > 0 %>
     <div class="container-cards">
-      <div class="text-center">
-      <h3>
-        Activities
-      </h3>
+      <div class="activities-trip">
+        <h3>Activities</h3>
       </div>
       <div class="row">
       <div class="col-xs-12">

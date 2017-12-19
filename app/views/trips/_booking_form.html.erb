@@ -5,7 +5,7 @@
         <%= simple_form_for [trip, booking], input_html: { id: "trip-form" } do |f| %>
         <%= f.input :check_in, as: :date, html5: true  %>
         <%= f.input :check_out, as: :date, html5: true  %>
-        <%= f.input :guests, as: :integer %>
+        <%= f.input :guests, as: :integer, input_html: { class: "input-width-set", placeholder: "Input guest amount" } %>
         <%= f.button :submit, class: "create_trip" %>
         <% end %>
         <%= render "shared/flashes" %>
