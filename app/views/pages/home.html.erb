@@ -8,7 +8,7 @@
 
 <div class="categories">
         <% @categories.each do |category| %>
-        <%= link_to root_path(category: category.name), class: 'category-image', "data-balloon": category.name, "data-balloon-pos": "down" do %>
+        <%= link_to home_path(category: category.name), class: 'category-image', "data-balloon": category.name, "data-balloon-pos": "down" do %>
           <%= image_tag category.photo%>
         <% end %>
       <% end %>
