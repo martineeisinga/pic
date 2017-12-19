@@ -1,5 +1,6 @@
-.container-cards {
-  margin: 20px 0;
+.container-marged {
+  margin-bottom:40px;
+  margin-top:20px;
 }
 
 .activities-trip h3 {
@@ -7,9 +8,10 @@
   margin-top: 30px;
   border-bottom: 1px solid #25283D;
   font-weight: 300;
-  width: 300px;
+  max-width: 300px;
   padding-bottom: 15px;
   text-align:center;
+  margin: 0 auto;
 }
 
 
