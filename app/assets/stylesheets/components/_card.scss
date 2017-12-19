@@ -27,6 +27,7 @@
   width: 40px;
   border-radius: 50%;
 }
+
 .card-category {
   font-size: 15px;
   margin-bottom: 15px;
@@ -41,11 +42,12 @@
 .card-description p {
   font-size: 14px;
   opacity: 0.7;
-  font-weight: lighter;
+  font-weight: 600 !important;
   color: white;
   font-family: "Open Sans", sans-serif;
   letter-spacing: 1px
 }
+
 .card-link {
   position: absolute;
   top: 0;

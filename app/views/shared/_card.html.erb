@@ -30,7 +30,13 @@
   <% end %>
   <% if booked %>
     <div class="card-description">
-    <p><%= trip.bookings.count %> times booked</p>
+   <% if trip.bookings.count == 0%>
+      <p>Not booked yet..</p>
+    <% elsif trip.bookings.count == 1 %>
+      <p><%= trip.bookings.count %> time booked</p>
+      <% else %>
+      <p> <%= trip.bookings.count  %> times booked</p>
+    <% end %>
     </div>
   <% end %>
 
@@ -49,7 +55,7 @@
     <% end %>
       <% if edit_trip %>
       <div class="card-edit">
-        <%= link_to edit_trip_path(trip), class: "card-link" do %>
+        <%= link_to trip_path(trip), class: "card-link" do %>
         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
         <% end %>
       </div>
