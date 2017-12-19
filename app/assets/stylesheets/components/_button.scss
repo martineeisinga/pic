@@ -88,6 +88,9 @@
   padding-left:5px;
   padding-right:5px;
   margin-top:10px;
+  &:hover, &:active, &:focus, &:visited {
+    text-decoration: none;
+  }
 }
 .btn-picn {
   color: #7F7EFF;
