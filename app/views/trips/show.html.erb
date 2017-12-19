@@ -1,31 +1,30 @@
-
 <div class="booking-trip-page-wrapper">
-
- <div class="trip-name"><%= @trip.name %></div>
-  <div class="trip-location"><%= @trip.location %></div>
-
-  <div class="trip-card-banner" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 90%,white 100%), url(<%= cl_image_path @trip.photo%>);">
-
-    <div class="trip-price">$<%= @trip.price_experience %></div>
+  <div class="trip-name">
+    <%= @trip.name %>
   </div>
-
- <div class="trip-description"><%= @trip.description %></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6">
-        <div class="book-trip-form-wrapper text-center">
-          <%= simple_form_for [@trip, @booking], input_html: { id: "trip-form" } do |f| %>
-          <%= f.input :check_in, as: :date, html5: true  %>
-          <%= f.input :check_out, as: :date, html5: true  %>
-          <%#= f.input :guests, collection: 1..10 %>
-          <%= f.input :guests, as: :integer %>
-          <%= f.button :submit, class: "create_trip" %>
-          <% end %>
-          <%= render "shared/flashes" %>
-        </div>
-      </div>
+  <div class="trip-location">
+    <%= @trip.location %>
+  </div>
+  <% if @trip.activities.length > 0 %>
+    <%= render partial: "carousel", locals: { trip: @trip, activities: @activities } %>
+  <% else %>
+    <div class="trip-card-banner" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 90%,white 100%), url(<%= cl_image_path @trip.photo%>);">
+      <span class="label-green bordered">
+        $<%= @trip.price_experience %>
+      </span>
     </div>
-  </div>
+  <% end %>
+
+  <%= render partial: "hotel_information", locals: { trip: @trip, activities: @activities } %>
+
+
+  <% if current_user.trip_ids.include?(@trip.id) %>
+    <div class="text-center">
+      <%= link_to "Add activity", new_trip_activity_path(@trip), class: "btn-pic " %>
+    </div>
+  <% else %>
+    <%= render partial: "booking_form", locals: { trip: @trip, booking: @booking } %>
+  <% end %>
 </div>
 
 <%= render partial: "shared/floating_button" %>

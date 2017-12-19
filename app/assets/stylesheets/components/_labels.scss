@@ -1,0 +1,19 @@
+.label-blue {
+  background-color: #b4c6e5;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.label-green {
+  background-color: $green;
+  color: white;
+  padding: 3px 5px;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.label-green.bordered {
+  border: 1px solid #dcd8d8;
+}

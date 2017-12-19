@@ -11,15 +11,16 @@ User.destroy_all
 Category.destroy_all
 Trip.destroy_all
 SavedTrip.destroy_all
+Activity.destroy_all
 
 
 
-snow = Category.create(name: "snow", photo: 'snow_2.png')
-beach = Category.create(name: "beach", photo: 'ocean_1.png')
-mountain = Category.create(name: "mountain", photo: 'mountain_new.png')
-city = Category.create(name: "city", photo: 'city_8.png')
-dessert = Category.create(name: "dessert", photo: 'desert.png')
-jungle = Category.create(name: "jungle", photo: 'jungle_new.jpg')
+snow = Category.create(name: "snow", photo: 'snowflake.png')
+beach = Category.create(name: "beach", photo: 'beach.png')
+mountain = Category.create(name: "mountain", photo: 'mountain.png')
+city = Category.create(name: "city", photo: 'cityscape.png')
+dessert = Category.create(name: "dessert", photo: 'cactus.png')
+jungle = Category.create(name: "jungle", photo: 'monkey.png')
 
 pic1 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241894/pic-n-travel/hotel1.jpg"
 pic2 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241894/pic-n-travel/snow.jpg"
@@ -102,7 +103,8 @@ barcelona = SavedTrip.create(user_id: omar.id, trip_id: madrid.id, location: "ma
   rand(0..5).times do
     url = pictures.sample
     trip = Trip.new(
-      name: Faker::Name.first_name + " Hotel",
+      name: Faker::Name.first_name,
+      hotel_name: Faker::Name.first_name + "Hotel",
       location: Faker::Name.first_name,
       description: descriptions.sample,
       price_experience: rand(200..1000),

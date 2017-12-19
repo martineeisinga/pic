@@ -9,6 +9,7 @@ class SavedTripsController < ApplicationController
     @saved_trip.trip = @trip
     @saved_trip.location = @trip.location
     if @saved_trip.save
+      flash[:notice] = "#{@trip.name} has been saved"
       redirect_to root_path
     else
       redirect_to root_path

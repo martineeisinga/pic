@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :trips do
     resources :bookings, only: [:create]
     resources :saved_trips, only: [:create, :destroy]
+    resources :activities, only: [:new, :create]
   end
 
 

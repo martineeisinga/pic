@@ -6,6 +6,7 @@ class TripsController < ApplicationController
 
   def show
     @booking = Booking.new
+    @activities = @trip.activities
   end
 
   def new
@@ -31,7 +32,7 @@ class TripsController < ApplicationController
 
   def update
     if @trip.update(trip_params)
-      redirect_to profile_path
+      redirect_to trip_path(@trip)
     else
       render :edit
     end
@@ -45,7 +46,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:trip).permit(:name, :price_experience, :date, :description, :category_id, :location, :photo, :photo_cache)
+    params.require(:trip).permit(:name, :price_experience, :date, :description, :category_id, :hotel_name, :location, :photo, :photo_cache)
   end
 
   def set_user

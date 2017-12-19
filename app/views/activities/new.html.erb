@@ -1,19 +1,18 @@
+<div class="text-center edit-trip">
+  <h1>Add activity to trip</h1>
+</div>
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-offset-3 col-md-6">
-      <%= simple_form_for(@trip) do |f| %>
+      <%= simple_form_for([@trip, @activity]) do |f| %>
+      <%= f.input :activity_type %>
       <%= f.input :name %>
-      <%= f.input :hotel_name %>
       <%= f.input :description %>
-      <%= f.input :location %>
-      <%= f.input :price_experience %>
-      <%= f.input :date %>
-      <%= f.input :category_id, collection: @categories%>
       <%= f.input :photo %>
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.submit class: "btn btn-pic text-center"%>
       <% end %>
+      <%= link_to "Skip", trip_path(@trip), class: "btn-pic" %>
     </div>
   </div>
 </div>
-

@@ -1,0 +1,57 @@
+.container-marged {
+  margin-bottom:40px;
+  margin-top:20px;
+}
+
+.activities-trip h3 {
+  font-size: 30px;
+  margin-top: 30px;
+  border-bottom: 1px solid #25283D;
+  font-weight: 300;
+  max-width: 300px;
+  padding-bottom: 15px;
+  text-align:center;
+  margin: 0 auto;
+}
+
+
+.hotel-name h3 {
+  font-size: 30px;
+  margin-top: 30px;
+  border-bottom: 1px solid #25283D;
+  font-weight: 300;
+}
+
+.hotel-description {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative
+}
+
+.hotel-img {
+  margin: 35px;
+}
+
+.hotel-details {
+  letter-spacing: 1px;
+  font-weight: lighter;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+  h5 {
+    font-size: 20px;
+    font-weight:bolder;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size:15px;
+  }
+}
+
+.hotel-img img{
+  width:150px;
+}
