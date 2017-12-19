@@ -8,6 +8,9 @@
         <a href="#" class="tab" data-target="saved">
           My saved trips
         </a>
+         <a href="#" class="tab" data-target="map-show">
+          My trips map
+        </a>
       </div>
     </div>
   </div>
@@ -41,6 +44,44 @@
 
 </div>
 
+
+<div class="tab-content hidden" id="map-show">
+
+    <div class= "map-wrapper">
+      <div id="map" style="width: 60%; height: 550px;"></div>
+
+
+      </div>
+    </div>
+
+</div>
+
+
 <%= render partial: "shared/floating_button" %>
+
+
+<script type="text/javascript">
+  <% content_for(:after_js) do %>
+    <%= javascript_tag do %>
+      var handler = Gmaps.build('Google');
+      handler.buildMap({ internal: { id: 'map' } }, function() {
+        markers = handler.addMarkers(<%= raw @markers.to_json %>);
+        markers2 = handler.addMarkers(<%= raw @markers2.to_json %>);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+        if (markers.length == 0) {
+          handler.getMap().setZoom(5);
+        } else if (markers.length == 1) {
+          handler.getMap().setZoom(9);
+        }
+        else {
+          handler.getMap().setZoom(2);
+        }
+      });
+    <% end %>
+  <% end %>
+</script>
+
+
 
 

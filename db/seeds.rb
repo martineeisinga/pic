@@ -94,7 +94,7 @@ categories = [jungle, dessert, city, mountain, beach, snow]
 puts "seeding starts..."
 omar = User.create(email: "omar@omar.com", password: "123456", username: "omar")
 madrid = Trip.create(name: "oriental", location: "madrid", description: "awesome", price_experience: 5, user_id: omar.id, category_id: snow.id)
-
+barcelona = SavedTrip.create(user_id: omar.id, trip_id: madrid.id, location: "madrid")
 
 10.times do
   user = User.create(email: Faker::Internet.free_email, password: "123456", username: Faker::Name.first_name)
