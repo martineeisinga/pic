@@ -1,13 +1,17 @@
-<div class="container category-container text-center">
+<!-- <div class="container category-container text-center">
   <div class="row">
     <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
-      <% @categories.each do |category| %>
+
+    </div>
+  </div>
+</div> -->
+
+<div class="categories">
+        <% @categories.each do |category| %>
         <%= link_to root_path(category: category.name), class: 'category-image', "data-balloon": category.name, "data-balloon-pos": "down" do %>
           <%= image_tag category.photo%>
         <% end %>
       <% end %>
-    </div>
-  </div>
 </div>
 
 <div class="container">
