@@ -1,23 +1,39 @@
-<div class="category-container text-center">
+<!-- <div class="container category-container text-center">
   <div class="row">
     <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
-      <% @categories.each do |category| %>
-        <%= link_to root_path(category: category.name) do %>
-          <%= image_tag category.photo, class: 'category-image'%>
-        <% end %>
-      <% end %>
+
     </div>
   </div>
+</div> -->
+
+<div class="categories">
+        <% @categories.each do |category| %>
+        <%= link_to home_path(category: category.name), class: 'category-image', "data-balloon": category.name, "data-balloon-pos": "down" do %>
+          <%= image_tag category.photo%>
+        <% end %>
+      <% end %>
 </div>
 
 <div class="container">
   <div class="row">
     <% @trips.each do |trip| %>
     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <%= render partial: 'shared/card', locals: { trip: trip, booked: false, user_bio: true, edit_trip:false, add_save_trip:true, marker_booked: false, book_trip: true} %>
+      <%= render partial: 'shared/card', locals: {
+        trip: trip,
+        booked: false,
+        user_bio: true,
+        edit_trip:false,
+        add_save_trip:true,
+        marker_booked: false,
+        book_trip: true
+      } %>
       <% end %>
     </div>
   </div>
+</div>
+
+<div class="pagination-container">
+<%= will_paginate @trips %>
 </div>
 
 <% if current_user %>

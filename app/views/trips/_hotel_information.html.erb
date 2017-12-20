@@ -1,0 +1,47 @@
+<div class="hotel-name">
+  <h3>
+    <%= trip.hotel_name %>
+  </h3>
+</div>
+<div class="hotel-description">
+  <div class="hotel-img">
+    <%= image_tag 'hotel.svg' %>
+  </div>
+  <div class="hotel-details">
+    <h5>
+      <%= trip.hotel_name %>
+    </h5>
+    <p>
+      <%= trip.description %>
+    </p>
+  </div>
+    <% if current_user.trip_ids.include?(@trip.id) %>
+    <div class="buttons-shared text-center">
+      <%= link_to trip_path(@trip), method: :delete do %>
+        <i class="fa fa-trash-o"></i>
+      <% end %>
+       <%= link_to edit_trip_path(@trip) do %>
+        <i class="fa fa-pencil"></i>
+      <% end %>
+    </div>
+    <% end %>
+</div>
+
+
+
+  <% if trip.activities.length > 0 %>
+    <div class="container container-marged">
+      <div class="activities-trip">
+        <h3>Activities</h3>
+      </div>
+      <div class="row">
+      <div class="col-xs-12">
+      </div>
+        <% activities.each do |activity| %>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <%= render partial: "activity_card", locals: { activity: activity } %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>

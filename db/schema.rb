@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171218104439) do
+ActiveRecord::Schema.define(version: 20171219111851) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
-    t.string "trip_type"
+    t.string "activity_type"
     t.string "name"
     t.string "photo"
     t.string "description"
@@ -50,6 +50,9 @@ ActiveRecord::Schema.define(version: 20171218104439) do
     t.bigint "trip_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.string "location"
     t.index ["trip_id"], name: "index_saved_trips_on_trip_id"
     t.index ["user_id"], name: "index_saved_trips_on_user_id"
   end
@@ -65,6 +68,9 @@ ActiveRecord::Schema.define(version: 20171218104439) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "hotel_name"
+    t.float "latitude"
+    t.float "longitude"
     t.index ["category_id"], name: "index_trips_on_category_id"
     t.index ["user_id"], name: "index_trips_on_user_id"
   end

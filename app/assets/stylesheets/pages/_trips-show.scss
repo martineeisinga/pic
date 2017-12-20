@@ -1,38 +1,40 @@
 .booking-trip-page-wrapper {
-  .trip-name, .trip-location {
+  .trip-name, .trip-location, .hotel-name {
     font-family: 'Open Sans', sans-serif;
-    // letter-spacing: 1px;
-    // color: rgb(100, 100, 100);
     text-align: center;
-
     color: #25283D ;
     font-weight: lighter;
     letter-spacing: 1px;
-
     margin: 20px auto;
     width: 400px;
     padding-bottom: 15px;
   }
 
   .trip-name {
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 30px;
     border-bottom: 1px solid #25283D ;
+    padding: 5px
   }
+
   .trip-location {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 2px;
   }
 
   .trip-card-banner{
     min-height: 400px;
-    text-shadow: 0 1px 3px rgba(0,0,0,0.6);
     background-position: center;
     color: white;
     position: relative;
     background-repeat: no-repeat;
     // margin-top: 40px;
     background-size: cover;
+    .label-green {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
     .trip-price {
       padding: 15px;
       position: absolute;
@@ -46,16 +48,12 @@
 
     }
   }
+}
 
-  .trip-description {
-    font-family: 'Open Sans', sans-serif;
-    color: #25283D ;
-    font-weight: lighter;
-    letter-spacing: 1px;
-    background-color: white;
-    padding: 10px;
-    text-align: center;
-    margin-right: 150px;
-    margin-left: 150px;
+.trip-photo {
+  .label-green {
+    position: absolute;
+    top: 15px;
+    right: 15px;
   }
 }

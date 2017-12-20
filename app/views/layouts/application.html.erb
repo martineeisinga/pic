@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Pic'n'Travel</title>
+    <%= favicon_link_tag 'favicon.png' %>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
@@ -12,15 +13,30 @@
   </head>
   <body>
     <%= render 'shared/navbar' %>
-    <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6">
+<!--     <div class="col-xs-12 col-sm-offset-2 col-sm-8 col-md-offset-3 col-md-6"> -->
       <%= render 'shared/flashes' %>
-    </div>
+    <!-- </div> -->
 
     <div class="pages-container">
       <%= yield %>
     </div>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
+
+  <%= javascript_pack_tag 'application' %>
+  <!-- [...] -->
+  <%#= javascript_include_tag "https://maps.google.com/maps/api/js" %>
+  <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/markerclusterer/src/markerclusterer_compiled.js" %>
+  <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" %>
+
+  <%= javascript_include_tag "application" %>
+
+  <%= javascript_include_tag "https://maps.google.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
+
+<!-- sorry for the long line... -->
+
+  <%= yield(:after_js) %>
+
+   <%= render 'shared/footer' %>
+
   </body>
 </html>
 
