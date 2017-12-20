@@ -1,11 +1,13 @@
-  <div class="activity-card" style="background-image:linear-gradient(-225deg, rgba(1,1,1,0.2) 0%, rgba(1,1,1,0.2) 50%), url('<%= cl_image_path activity.photo %>');">
-    <h4>
-      <%= activity.name %>
-    </h4>
-    <span class="label-blue">
-      <%= activity.activity_type %>
-    </span>
-    <p>
-      <%= activity.description %>
-    </p>
-  </div>
+  <%= link_to activity.link_activity, target: :_blank do %>
+    <div class="activity-card" style="background-image:linear-gradient(-225deg, rgba(1,1,1,0.2) 0%, rgba(1,1,1,0.2) 50%), url('<%= cl_image_path activity.photo %>');">
+      <h4>
+        <%= activity.name %>
+      </h4>
+      <span class="label-blue">
+        <%= activity.activity_type %>
+      </span>
+      <p>
+        <%= activity.description %>
+      </p>
+    </div>
+ <% end %>
