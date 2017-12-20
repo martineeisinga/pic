@@ -40,7 +40,7 @@ class TripsController < ApplicationController
 
   def destroy
     @trip.destroy
-    redirect_to trips_path
+    redirect_to profile_path
   end
 
   private

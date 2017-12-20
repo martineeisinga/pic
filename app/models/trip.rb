@@ -9,6 +9,10 @@ class Trip < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   validates :photo, presence: true
+  validates :name, presence: true
+  validates :hotel_name, presence: true
+  validates :location, presence: true
+  validates :description, presence: true
 
    geocoded_by :location
   after_validation :geocode, if: :location_changed?

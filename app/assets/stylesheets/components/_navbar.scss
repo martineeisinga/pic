@@ -1,6 +1,7 @@
 /* Main navbar */
 .navbar-wagon {
-  background: $brand-color;
+  background: white;
+  // $brand-color
   transition: all 0.3s ease;
   height: 70px;
   padding: 0px 30px;
@@ -10,6 +11,7 @@
   position: sticky;
   top: 0;
   z-index: 3;
+  border-bottom: 2px solid $brand-color;
 }
 
 /* Logo */

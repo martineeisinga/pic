@@ -9,7 +9,7 @@
     <%= render partial: "carousel", locals: { trip: @trip, activities: @activities } %>
   <% else %>
     <div class="trip-card-banner" style="background-image: linear-gradient(rgba(255, 255, 255, 0) 90%,white 100%), url(<%= cl_image_path @trip.photo%>);">
-      <span class="label-green bordered">
+      <span class="label-brand bordered">
         $<%= @trip.price_experience %>
       </span>
     </div>

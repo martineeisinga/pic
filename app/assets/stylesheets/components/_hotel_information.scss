@@ -35,6 +35,20 @@
   margin: 35px;
 }
 
+.hotel-img img{
+  width:150px;
+}
+
+@media(max-width: 768px) {
+.hotel-img {
+  margin-left: -20px;
+  padding-left: 10px;
+  }
+.hotel-img img {
+  width: 100px;
+}
+}
+
 .hotel-details {
   letter-spacing: 1px;
   font-weight: lighter;
@@ -52,6 +66,3 @@
   }
 }
 
-.hotel-img img{
-  width:150px;
-}

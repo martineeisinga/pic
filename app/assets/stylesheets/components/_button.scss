@@ -1,6 +1,6 @@
 .btn-pic {
-  color: #7F7EFF;
-  border: 2px solid #7F7EFF;
+  color: $brand-color;
+  border: 2px solid $brand-color;
   padding: 10px 15px;
   border-radius: 50px;
   font-weight: lighter;
@@ -22,16 +22,15 @@
   font-weight: 600 !important;
   right: 100px;
   padding-top: 10px;
-  border: 2px solid #7F7EFF;
+  border: 2px solid $brand-color;
   padding: 10px 15px;
   border-radius: 50px;
   font-weight: lighter;
-  opacity: 0.6;
   margin-top: 7px;
   font-size: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #7F7EFF;
+  background-color: $brand-color;
   color: white !important;
   padding-right: 100px;
   padding-left: 100px;
@@ -40,7 +39,7 @@
     text-decoration: none;
     border: 2px solid rgba(127, 126, 255, 0.3);
     background-color: rgba(127, 126, 255, 0.3);
-    color: #7F7EFF !important;
+    color: $brand-color !important;
   }
 }
 
@@ -92,9 +91,21 @@
     text-decoration: none;
   }
 }
+
+@media(max-width: 768px) {
+.buttons-shared {
+  margin-bottom: 30px;
+  position: absolute;
+  bottom:1px;
+  right: 3px
+  }
+}
+
+
+
 .btn-picn {
-  color: #7F7EFF;
-  border: 2px solid #7F7EFF;
+  color: $brand-color;
+  border: 2px solid $brand-color;
   padding: 10px 15px;
   border-radius: 50px;
   font-weight: lighter;
@@ -109,8 +120,14 @@
   opacity: 1;
   text-decoration: none;
   background-color: white;
-  color: #3D3A4B;
-  border: 2px solid #3D3A4B;
+  color: $dark-blue;
+  border: 2px solid $dark-blue;
+}
+
+.btn-pic.btn-activity {
+  position:relative;
+  margin-bottom: 0px;
+  vertical-align: initial;
 }
 
 

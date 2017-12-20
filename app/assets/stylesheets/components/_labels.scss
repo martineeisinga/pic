@@ -6,14 +6,17 @@
   font-size: 13px;
 }
 
-.label-green {
-  background-color: $green;
+.label-brand {
+  background-color: $brand-color;
   color: white;
   padding: 3px 5px;
   border-radius: 3px;
   font-size: 20px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
 
-.label-green.bordered {
+.label-brand.bordered {
   border: 1px solid #dcd8d8;
 }
