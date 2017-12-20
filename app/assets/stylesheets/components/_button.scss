@@ -91,6 +91,18 @@
     text-decoration: none;
   }
 }
+
+@media(max-width: 768px) {
+.buttons-shared {
+  margin-bottom: 30px;
+  position: absolute;
+  bottom:1px;
+  right: 3px
+  }
+}
+
+
+
 .btn-picn {
   color: $brand-color;
   border: 2px solid $brand-color;
@@ -110,6 +122,12 @@
   background-color: white;
   color: $dark-blue;
   border: 2px solid $dark-blue;
+}
+
+.btn-pic.btn-activity {
+  position:relative;
+  margin-bottom: 0px;
+  vertical-align: initial;
 }
 
 
