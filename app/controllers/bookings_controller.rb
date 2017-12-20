@@ -28,9 +28,8 @@ class BookingsController < ApplicationController
          end
 
          redirect_user = FlightService.new(trip: @trip, booking: @booking).call
-                          raise
 
-         redirect_to 'https://www.google.com/flights/#search;f=BCN,YJB;t=AMS,ZYA;d=2018-01-05;r=2018-01-08'
+         redirect_to redirect_user
       else
         flash[:alert] = "Already booked that trip"
         render "trips/show"
