@@ -8,11 +8,21 @@
   padding-top: 50px;
 }
 
-.banner-message {
+.banner-message-main {
   font-family: 'Helvetica Neue';
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
+  color: #363636;
+  text-align: center;
+  margin-top: 90px;
+}
+
+.banner-message-sub {
+  font-family: 'Helvetica Neue';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
   color: #363636;
   text-align: center;
 }
@@ -55,6 +65,7 @@
   font-family: 'Helvetica Neue';
   font-style: normal;
   font-weight: 300;
+  margin-top: 30px;
 }
 
 .icon-description {
@@ -71,7 +82,7 @@
 }
 
 .icon-text-container {
-  margin-left: 100px;
+  margin-left: 50px;
 
 }
 
@@ -82,9 +93,12 @@
 }
 
 
+.row.margin-top {
+    margin-top: 40px;
+}
 
-
-
-
+.banner-pages-container {
+  margin-top: -70px;
+}
 
 

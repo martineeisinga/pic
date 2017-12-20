@@ -1,8 +1,11 @@
 <div class="banner-image" style="background-image: url(<%= asset_url 'banner_pic_2.jpg' %>); background-size: cover; ">
-  <div class="banner-message">
-    <p>Get Travel Inspiration From Others And Book Their Trips</p>
+  <div class="banner-message-main">
+    <p>It All Starts with A Picture</p>
   </div>
-    <%= link_to "Get Inspired", home_path, class: "get-inspired" %>
+  <div class="banner-message-sub">
+    <p>Get Travel Inspiration From Others And Book The Same Trips</p>
+  </div>
+  <%= link_to "Get Inspired", home_path, class: "get-inspired" %>
 </div>
 
 <div class= "container">
@@ -12,39 +15,61 @@
     </div>
   </div>
 </div>
-<div class="all-icon-wraper">
-  <div class="icon-container">
-    <%= image_tag 'find-location.png', class: "banner-icon" %>
-    <div class="icon-text-container">
-      <div class="icon-title">
-        <p>Find Inspiration</p>
-      </div>
-      <div class="icon-description">
-        <p>let other travelers inspire you with their awesome pictures and filter the results based on the environment you'd like to be in</p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-lg-6 col-lg-offset-3">
+      <div class="row margin-top">
+        <div class="col-xs-12 col-lg-6 text-center">
+          <%= image_tag 'find-location.png', class: "banner-icon" %>
+
+        </div>
+        <div class="col-xs-12 col-lg-6">
+          <div class="icon-text-container">
+            <div class="icon-title">
+              <p>Find Inspiration</p>
+            </div>
+            <div class="icon-description">
+              <p>let other travelers inspire you with their awesome pictures and filter the results based on the environment you'd like to be in</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="col-xs-12 col-lg-6 col-lg-offset-3">
+      <div class="row margin-top">
+        <div class="col-xs-12 col-lg-6 text-center">
+          <%= image_tag 'online-booking.png', class: "banner-icon" %>
 
-  <div class="icon-container">
-    <%= image_tag 'online-booking.png', class: "banner-icon" %>
-    <div class="icon-text-container">
-      <div class="icon-title">
-        <p>Book It</p>
-      </div>
-      <div class="icon-description">
-        <p>Dont let booking agencies cheat you with their pictures. Book exactly what other travelers have experienced and relive the photographs</p>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+          <div class="icon-text-container">
+            <div class="icon-title">
+              <p>Book It</p>
+            </div>
+            <div class="icon-description">
+              <p>Dont let booking agencies cheat you with their pictures. Book what other travelers have experienced and relive the photographs</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+    <div class="col-xs-12 col-lg-6 col-lg-offset-3">
+      <div class="row margin-top">
+        <div class="col-xs-12 col-lg-6 text-center">
+          <%= image_tag 'suitcase.png', class: "banner-icon" %>
 
-  <div class="icon-container">
-    <%= image_tag 'suitcase.png', class: "banner-icon" %>
-    <div class="icon-text-container">
-      <div class="icon-title">
-        <p>Pack Your Bags</p>
-      </div>
-      <div class="icon-description">
-        <p>Get ready for your vacation and dont forget to take your own pictures to inspire others</p>
+        </div>
+        <div class="col-xs-12 col-lg-6">
+          <div class="icon-text-container">
+            <div class="icon-title">
+              <p>Pack Your Bags</p>
+            </div>
+            <div class="icon-description">
+              <p>Get ready for your vacation and dont forget to take your own pictures to inspire others</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

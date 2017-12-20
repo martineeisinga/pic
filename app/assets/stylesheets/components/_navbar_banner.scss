@@ -1,6 +1,6 @@
-/* Main navbar */
-.navbar-wagon {
-  background: white;
+
+.navbar-wagon-banner {
+  background: transparent;
   // $brand-color
   transition: all 0.3s ease;
   height: 70px;
@@ -11,7 +11,6 @@
   position: sticky;
   top: 0;
   z-index: 3;
-  border-bottom: 2px solid $brand-color;
 }
 
 /* Logo */
@@ -79,4 +78,3 @@
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
 }
-
