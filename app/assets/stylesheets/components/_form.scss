@@ -2,11 +2,11 @@
   input {
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
-    color: #25283D;
+    color: $brand-color;
 
   }
   p.help-block {
-    color: #C19AB7;
+    color: $dark-blue;
     letter-spacing: 1px;
     font-size: 12px;
     font-weight: lighter;
@@ -14,7 +14,7 @@
 }
 
 .simple_form label {
-  color: #7A93AC;
+  color: $dark-blue;
   font-weight: lighter;
   letter-spacing: 1px;
   font-family: 'Open Sans', sans-serif;
