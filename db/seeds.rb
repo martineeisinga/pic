@@ -15,12 +15,12 @@ Activity.destroy_all
 
 
 
-snow = Category.create(name: "snow", photo: 'snowflake.png')
-beach = Category.create(name: "beach", photo: 'beach.png')
-mountain = Category.create(name: "mountain", photo: 'mountain.png')
-city = Category.create(name: "city", photo: 'cityscape.png')
-dessert = Category.create(name: "dessert", photo: 'cactus.png')
-jungle = Category.create(name: "jungle", photo: 'monkey.png')
+snow = Category.create(name: "snow", photo: 'snow.jpg')
+beach = Category.create(name: "beach", photo: 'beach.jpg')
+mountain = Category.create(name: "mountain", photo: 'mountain.jpg')
+city = Category.create(name: "city", photo: 'city.jpg')
+dessert = Category.create(name: "dessert", photo: 'desert.jpg')
+jungle = Category.create(name: "jungle", photo: 'jungle.jpg')
 
 pic1 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241894/pic-n-travel/hotel1.jpg"
 pic2 = "http://res.cloudinary.com/dh46jpozr/image/upload/v1513241894/pic-n-travel/snow.jpg"

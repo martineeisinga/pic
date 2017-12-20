@@ -1,6 +1,10 @@
 // Specific CSS for your home-page
 .category-image {
   text-decoration: none;
+  text-decoration: none;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px #e4e4e4;
+    margin: 0.3vw;
   &:hover, &:visited, &:active, &:focus {
     text-decoration: none;
   }
