@@ -46,7 +46,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:trip).permit(:name, :price_experience, :date, :description, :category_id, :hotel_name, :location, :photo, :photo_cache)
+    params.require(:trip).permit(:name, :price_experience, :date, :description, :category_id, :hotel_name, :location, :photo, :photo_cache, :link_hotel)
   end
 
   def set_user
