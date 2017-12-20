@@ -47,5 +47,7 @@ class PagesController < ApplicationController
   end
 
   def banner
+    @banner_page = true
+
   end
 end
