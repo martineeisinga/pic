@@ -8,7 +8,6 @@ class Trip < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
-  validates :photo, presence: true
   validates :name, presence: true
   validates :hotel_name, presence: true
   validates :location, presence: true
