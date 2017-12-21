@@ -82,7 +82,7 @@ users = [martine, emilio, omar, jakob, madi]
     ibiza_restaurant = Activity.new(
       activity_type: "Restaurant",
       name: "Cotton Beach Club",
-      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513849667/pic-n-travel/cotton.jpg",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513854716/cotton-2_qlnozx.jpg",
       description: "Cotton Beach Club is just great for sundown cocktails",
       link_activity: "http://cottonbeachclub.com/",
       trip: ibiza
@@ -92,18 +92,43 @@ users = [martine, emilio, omar, jakob, madi]
       name: "Colombian experience",
       hotel_name: "Santa Clara",
       location: "Cartegena, Colombia",
-      description: "Gazing above the cliff top of Cap Martinet in Talamanca Bay, Destino Pacha Ibiza Resort offers sweeping panoramic views of the Mediterranean Sea, Dalt Vila (Ibiza's old town) and the island of Formentera. Enjoy a cocktail day by the Cherry pool and book a massage at the Wellness center.",
+      description: "A perfect blend of vintage and contemporary, striking a balance between art and beauty to accommodate modernity and technology in unique surroundings.",
       price_experience: rand(200..1000),
-      link_hotel: "https://www.destinoibiza.com/",
-      user: madi,
+      link_hotel: "http://www.sofitel.com/gb/hotel-1871-sofitel-legend-santa-clara-cartagena/index.shtml",
+      user: emilio,
       category: beach,
-      remote_photo_url:
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513850057/cartagena_rfjoos.jpg"
       )
+
+    cartagena_activity = Activity.new(
+      activity_type: "Island visit",
+      name: "Rosario Islands",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513855095/rosario_islands_bwqwe0.jpg",
+      description: "Amazing trip!",
+      link_activity: "https://www.viator.com/tours/Cartagena/Full-Day-Rosario-Islands-Including-Bar-Cholo-and-Playa-Blanca/d4498-34334P3",
+      trip: cartagena
+      )
+
+    dubai = Trip.new(
+      name: "Discover Dubai",
+      hotel_name: "http://www.sofitel.com/gb/europe/index.shtml",
+      location: "Dubai",
+      description: "Sofitel Dubai The Palm Resort & Spa offers a luxury beach holiday with stunning views over Dubai, a wide choice of restaurants and an amazing swimming pool.",
+      price_experience: rand(200..1000),
+      link_hotel: "http://www.sofitel.com/gb/hotel-6541-sofitel-dubai-the-palm-resort-spa/index.shtml",
+      user: jakob,
+      category: desert,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513850071/dubai_s0wwac.jpg"
+      )
+
 
 finland.save
 finland_restaurant.save
 ibiza.save
 ibiza_restaurant.save
+cartagena.save
+cartagena_activity.save
+dubai.save
 
 puts "seeding stops"
 
