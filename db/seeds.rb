@@ -111,15 +111,55 @@ users = [martine, emilio, omar, jakob, madi]
 
     dubai = Trip.new(
       name: "Discover Dubai",
-      hotel_name: "http://www.sofitel.com/gb/europe/index.shtml",
+      hotel_name: "Sofitel Dubai",
       location: "Dubai",
       description: "Sofitel Dubai The Palm Resort & Spa offers a luxury beach holiday with stunning views over Dubai, a wide choice of restaurants and an amazing swimming pool.",
       price_experience: rand(200..1000),
       link_hotel: "http://www.sofitel.com/gb/hotel-6541-sofitel-dubai-the-palm-resort-spa/index.shtml",
       user: jakob,
       category: desert,
-      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513850071/dubai_s0wwac.jpg"
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513691503/adltp7ydy1c0kne9gsno.jpg"
       )
+
+    dubai_activity = Activity.new(
+      activity_type: "Jeep drive",
+      name: "Omar's Jeep Station",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513855942/dubai_desert_zv5ge0.jpg",
+      description: "Thrilling!",
+      link_activity: "https://www.toursbylocals.com/Dubai-Private-Tours?s=AW_17B_005B_%2Btouring%20%2Bdubai&gclid=CjwKCAiA1O3RBRBHEiwAq5fD_FIWW_0Gbhh26hVMDbyxAvxgja1leuoTRUu4wbUDaTAB9JneO6CrMxoCOJAQAvD_BwE",
+      trip: dubai
+      )
+
+    dubai_restaurant = Activity.new(
+      activity_type: "Restaurant",
+      name: "Four Season Restaurant",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513850071/dubai_restaurant_wbikoo.jpg",
+      description: "Best food!",
+      link_activity: "https://www.fourseasons.com/content/fourseasons/en/properties/dubaijb/dining/",
+      trip: dubai
+      )
+
+    himalaya = Trip.new(
+      name: "Himalaya was top",
+      hotel_name: "Hotel Himalaya",
+      location: "Himalaya, Nepal",
+      description: "Very nice hotel. Comfortable and clean rooms. Attentive staf and great service. Beautiful grounds with swimming pool.",
+      price_experience: rand(200..1000),
+      link_hotel: "http://hotelhimalaya.com.np/",
+      user: martine,
+      category: mountain,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513856730/Mountain_trip_jqtiph.jpg"
+      )
+
+    himalaya_hike = Activity.new(
+      activity_type: "Hike",
+      name: "Hiking Nepal",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513857002/hike_himalaya_msttm2.jpg",
+      description: "Great experience in Mera Peak",
+      link_activity: "http://www.hikingnepal.com/index.php",
+      trip: himalaya
+      )
+
 
 
 finland.save
@@ -129,6 +169,10 @@ ibiza_restaurant.save
 cartagena.save
 cartagena_activity.save
 dubai.save
+dubai_activity.save
+dubai_restaurant.save
+himalaya.save
+himalaya_hike.save
 
 puts "seeding stops"
 
