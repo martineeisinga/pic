@@ -202,6 +202,27 @@ users = [martine, emilio, omar, jakob, madi]
       )
 
 
+    zurich = Trip.new(
+      name: "Sportive Zurich Trip",
+      hotel_name: "Park Hyatt Zurich",
+      location: "Zurich, Swiss",
+      description: "This modern city-centre hotel with spacious rooms and suites sets out to highlight sophisticated decor and culture.",
+      price_experience: rand(200..1000),
+      link_hotel: "https://zurich.park.hyatt.com/en/hotel/home.html?src=pfxeame_sem_google_zurph_rooms_ww_eng_gen_exact_Google_ZURPH_Rooms_WW_ENG_Gen+Hotel_exact_hotel%20zurich&mckv=sA1Rceui5-dc_pcrid_218128791320_mtid_5297kx13790",
+      user: jakob,
+      category: mountain,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513691503/adltp7ydy1c0kne9gsno.jpg"
+      )
+
+    zurich_breakfast = Activity.new(
+      activity_type: "Breakfast",
+      name: "Cafe Schober",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513857778/breakfast_vnk53d.jpg",
+      description: "Not one to be missed in Zurich",
+      link_activity: "http://www.peclard-zurich.ch/",
+      trip: zurich,
+      )
+
 
 
 finland.save
@@ -219,6 +240,8 @@ canada.save
 canada_hike.save
 thailand.save
 thailand_trekking.save
+zurich.save
+zurich_breakfast.save
 
 puts "seeding stops"
 
