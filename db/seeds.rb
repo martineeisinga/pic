@@ -100,7 +100,7 @@ users = [martine, emilio, omar, jakob, madi]
       remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513850057/cartagena_rfjoos.jpg"
       )
 
-    cartagena_activity = Activity.new (
+    cartagena_activity = Activity.new(
       activity_type: "Island visit",
       name: "Rosario Islands",
       remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513855095/rosario_islands_bwqwe0.jpg",
@@ -109,12 +109,26 @@ users = [martine, emilio, omar, jakob, madi]
       trip: cartagena
       )
 
+    dubai = Trip.new(
+      name: "Discover Dubai",
+      hotel_name: "http://www.sofitel.com/gb/europe/index.shtml",
+      location: "Dubai",
+      description: "Sofitel Dubai The Palm Resort & Spa offers a luxury beach holiday with stunning views over Dubai, a wide choice of restaurants and an amazing swimming pool.",
+      price_experience: rand(200..1000),
+      link_hotel: "http://www.sofitel.com/gb/hotel-6541-sofitel-dubai-the-palm-resort-spa/index.shtml",
+      user: jakob,
+      category: desert,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513850071/dubai_s0wwac.jpg"
+      )
+
+
 finland.save
 finland_restaurant.save
 ibiza.save
 ibiza_restaurant.save
 cartagena.save
 cartagena_activity.save
+dubai.save
 
 puts "seeding stops"
 
