@@ -159,6 +159,48 @@ users = [martine, emilio, omar, jakob, madi]
       link_activity: "http://www.hikingnepal.com/index.php",
       trip: himalaya
       )
+    canada = Trip.new(
+      name: "Best Canadian Experience",
+      hotel_name: "Bnaff Springs Hotel",
+      location: "calgary",
+      description: "This hotel had everything we need.All facilities are available and the views are incredible.",
+      price_experience: rand(200..1000),
+      link_hotel: "http://www.fairmont.com/banff-springs/",
+      user: omar,
+      category: jungle,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513865504/canada_hotel_qczsb8.jpg"
+      )
+
+    canada_hike = Activity.new(
+      activity_type: "Hike",
+      name: "Hiking in canadian forests",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513865503/canada_activity_kjr2kz.jpg",
+      description: "This hike was one of the best experiences for me and my wife. Its a must try",
+      link_activity: "http://banff.ca/index.aspx?NID=657",
+      trip: canada
+      )
+
+    thailand = Trip.new(
+      name: "Best Canadian Experience",
+      hotel_name: "Six Senses",
+      location: "phuket",
+      description: "The most remarkable thai experience. Highly recomended for couples. ",
+      price_experience: rand(200..1000),
+      link_hotel: "http://www.sixsenses.com/resorts/yao-noi/accommodation/villas-and-suites",
+      user: omar,
+      category: jungle,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513865504/thailand_hotel_w7s0qe.jpg"
+      )
+
+    thailand_trekking = Activity.new(
+      activity_type: "Trekking",
+      name: "Elephant Trekking in the jungle",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513865503/thailand_activity_mp7r1o.jpg",
+      description: "If you visit thailand, DO NOT miss out on the elephant trekking experience. The kids loved the elephants.",
+      link_activity: "https://www.yourkrabi.com/elephant-trekking/",
+      trip: thailand
+      )
+
 
     zurich = Trip.new(
       name: "Sportive Zurich Trip",
@@ -194,6 +236,10 @@ dubai_activity.save
 dubai_restaurant.save
 himalaya.save
 himalaya_hike.save
+canada.save
+canada_hike.save
+thailand.save
+thailand_trekking.save
 zurich.save
 zurich_breakfast.save
 
