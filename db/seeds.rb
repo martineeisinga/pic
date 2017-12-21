@@ -160,7 +160,26 @@ users = [martine, emilio, omar, jakob, madi]
       trip: himalaya
       )
 
+    new_york = Trip.new(
+            name: "",
+      hotel_name: "",
+      location: "",
+      description: "",
+      price_experience: rand(200..1000),
+      link_hotel: "",
+      user: martine,
+      category: mountain,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513856730/Mountain_trip_jqtiph.jpg"
+      )
 
+     new_york_ = Activity.new(
+      activity_type: "Hike",
+      name: "Hiking Nepal",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513857002/hike_himalaya_msttm2.jpg",
+      description: "Great experience in Mera Peak",
+      link_activity: "http://www.hikingnepal.com/index.php",
+      trip: himalaya
+      )
 
 finland.save
 finland_restaurant.save
