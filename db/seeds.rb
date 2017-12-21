@@ -194,6 +194,8 @@ dubai_activity.save
 dubai_restaurant.save
 himalaya.save
 himalaya_hike.save
+zurich.save
+zurich_breakfast.save
 
 puts "seeding stops"
 
