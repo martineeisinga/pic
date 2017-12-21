@@ -122,9 +122,9 @@ users = [martine, emilio, omar, jakob, madi]
       )
 
     dubai_activity = Activity.new(
-      activity_type: "Jeep drive",
-      name: "Omar's Jeep Station",
-      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513855942/dubai_desert_zv5ge0.jpg",
+      activity_type: "Camel Ride",
+      name: "Mohammeds Camel Ride",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513866712/camel_hahcyi.jpg",
       description: "Thrilling!",
       link_activity: "https://www.toursbylocals.com/Dubai-Private-Tours?s=AW_17B_005B_%2Btouring%20%2Bdubai&gclid=CjwKCAiA1O3RBRBHEiwAq5fD_FIWW_0Gbhh26hVMDbyxAvxgja1leuoTRUu4wbUDaTAB9JneO6CrMxoCOJAQAvD_BwE",
       trip: dubai
@@ -211,7 +211,7 @@ users = [martine, emilio, omar, jakob, madi]
       link_hotel: "https://zurich.park.hyatt.com/en/hotel/home.html?src=pfxeame_sem_google_zurph_rooms_ww_eng_gen_exact_Google_ZURPH_Rooms_WW_ENG_Gen+Hotel_exact_hotel%20zurich&mckv=sA1Rceui5-dc_pcrid_218128791320_mtid_5297kx13790",
       user: jakob,
       category: mountain,
-      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513691503/adltp7ydy1c0kne9gsno.jpg"
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513857549/zurich_mountain_wrrp8u.jpg"
       )
 
     zurich_breakfast = Activity.new(
