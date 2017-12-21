@@ -47,7 +47,7 @@ users = [martine, emilio, omar, jakob, madi]
 
 
     finland = Trip.new(
-      name: "Finland Winter Trip",
+      name: "Finland Trip",
       hotel_name: "Kakslauttanen Resort",
       location: "Kakslauttanen, Finland",
       description: "Surrounded by nature, this unique property is located in the Saariselkä Fell region of Finnish Lapland. The property offers glass igloos and traditional wood chalets and has the world’s largest smoke sauna. Free WiFi and free parking are available.",
@@ -89,7 +89,7 @@ users = [martine, emilio, omar, jakob, madi]
       )
 
     cartagena = Trip.new(
-      name: "Colombian experience",
+      name: "Colombian travel",
       hotel_name: "Santa Clara",
       location: "Cartegena, Colombia",
       description: "A perfect blend of vintage and contemporary, striking a balance between art and beauty to accommodate modernity and technology in unique surroundings.",
@@ -140,7 +140,7 @@ users = [martine, emilio, omar, jakob, madi]
       )
 
     himalaya = Trip.new(
-      name: "Himalaya was top",
+      name: "Himalaya top",
       hotel_name: "Hotel Himalaya",
       location: "Himalaya, Nepal",
       description: "Very nice hotel. Comfortable and clean rooms. Attentive staf and great service. Beautiful grounds with swimming pool.",
@@ -161,7 +161,7 @@ users = [martine, emilio, omar, jakob, madi]
       )
 
     canada = Trip.new(
-      name: "Best Canadian Experience",
+      name: "Best Experience",
       hotel_name: "Bnaff Springs Hotel",
       location: "calgary",
       description: "This hotel had everything we need.All facilities are available and the views are incredible.",
@@ -204,7 +204,7 @@ users = [martine, emilio, omar, jakob, madi]
 
 
     zurich = Trip.new(
-      name: "Sportive Zurich Trip",
+      name: "Sportive Trip",
       hotel_name: "Park Hyatt Zurich",
       location: "Zurich, Swiss",
       description: "This modern city-centre hotel with spacious rooms and suites sets out to highlight sophisticated decor and culture.",
