@@ -173,9 +173,9 @@ users = [martine, emilio, omar, jakob, madi]
       )
 
     zurich_breakfast = Activity.new(
-      activity_type: "Breakfast"
+      activity_type: "Breakfast",
       name: "Cafe Schober",
-      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513857778/breakfast_vnk53d.jpg"
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513857778/breakfast_vnk53d.jpg",
       description: "Not one to be missed in Zurich",
       link_activity: "http://www.peclard-zurich.ch/",
       trip: zurich,
