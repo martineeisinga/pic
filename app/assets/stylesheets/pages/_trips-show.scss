@@ -28,6 +28,18 @@
     margin-bottom: 2px;
   }
 
+    @media(min-width: 500px) {
+      .trip-card-banner {
+        margin: 0px 100px;
+      }
+  }
+
+    @media(max-width: 500px) {
+      #carousel-example-generic{
+        margin: 0px !important;
+      }
+  }
+
   .trip-card-banner{
     min-height: 400px;
     background-position: center;
@@ -36,7 +48,6 @@
     background-repeat: no-repeat;
     // margin-top: 40px;
     background-size: cover;
-    margin: 0px 100px;
     .label-green {
       position: absolute;
       top: 15px;
