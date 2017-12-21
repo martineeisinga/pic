@@ -10,6 +10,12 @@
     padding-bottom: 15px;
   }
 
+  @media only screen and (min-width: 600px) {
+    img.d-block{
+        margin-top: -15vw;
+      }
+  }
+
   .trip-name {
     font-size: 35px;
     margin-top: 30px;
