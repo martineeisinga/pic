@@ -159,6 +159,7 @@ users = [martine, emilio, omar, jakob, madi]
       link_activity: "http://www.hikingnepal.com/index.php",
       trip: himalaya
       )
+
     canada = Trip.new(
       name: "Best Canadian Experience",
       hotel_name: "Bnaff Springs Hotel",
@@ -168,7 +169,7 @@ users = [martine, emilio, omar, jakob, madi]
       link_hotel: "http://www.fairmont.com/banff-springs/",
       user: omar,
       category: jungle,
-      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513865504/canada_hotel_qczsb8.jpg"
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513868013/canada_syiejo.jpg"
       )
 
     canada_hike = Activity.new(
@@ -181,10 +182,10 @@ users = [martine, emilio, omar, jakob, madi]
       )
 
     thailand = Trip.new(
-      name: "Best Canadian Experience",
+      name: "Thailand chill",
       hotel_name: "Six Senses",
-      location: "phuket",
-      description: "The most remarkable thai experience. Highly recomended for couples. ",
+      location: "Phuket",
+      description: "The most remarkable Thai experience. Highly recomended for couples. ",
       price_experience: rand(200..1000),
       link_hotel: "http://www.sixsenses.com/resorts/yao-noi/accommodation/villas-and-suites",
       user: omar,
@@ -239,7 +240,7 @@ users = [martine, emilio, omar, jakob, madi]
      new_york_restaurant = Activity.new(
       activity_type: "Restaurant",
       name: "Russ & Daughters Cafe",
-      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513866379/ny_restaurant_ygjbwt.jpg",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513868169/new_york_va6pme.jpg",
       description: "Undeniably the best pacakes you'll ever have for breakfast are at this place, a whole experience.",
       link_activity: "http://www.russanddaughterscafe.com/#menu-section",
       trip: new_york
