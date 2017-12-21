@@ -159,6 +159,69 @@ users = [martine, emilio, omar, jakob, madi]
       link_activity: "http://www.hikingnepal.com/index.php",
       trip: himalaya
       )
+    canada = Trip.new(
+      name: "Best Canadian Experience",
+      hotel_name: "Bnaff Springs Hotel",
+      location: "calgary",
+      description: "This hotel had everything we need.All facilities are available and the views are incredible.",
+      price_experience: rand(200..1000),
+      link_hotel: "http://www.fairmont.com/banff-springs/",
+      user: omar,
+      category: jungle,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513865504/canada_hotel_qczsb8.jpg"
+      )
+
+    canada_hike = Activity.new(
+      activity_type: "Hike",
+      name: "Hiking in canadian forests",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513865503/canada_activity_kjr2kz.jpg",
+      description: "This hike was one of the best experiences for me and my wife. Its a must try",
+      link_activity: "http://banff.ca/index.aspx?NID=657",
+      trip: canada
+      )
+
+    thailand = Trip.new(
+      name: "Best Canadian Experience",
+      hotel_name: "Six Senses",
+      location: "phuket",
+      description: "The most remarkable thai experience. Highly recomended for couples. ",
+      price_experience: rand(200..1000),
+      link_hotel: "http://www.sixsenses.com/resorts/yao-noi/accommodation/villas-and-suites",
+      user: omar,
+      category: jungle,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513865504/thailand_hotel_w7s0qe.jpg"
+      )
+
+    thailand_trekking = Activity.new(
+      activity_type: "Trekking",
+      name: "Elephant Trekking in the jungle",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513865503/thailand_activity_mp7r1o.jpg",
+      description: "If you visit thailand, DO NOT miss out on the elephant trekking experience. The kids loved the elephants.",
+      link_activity: "https://www.yourkrabi.com/elephant-trekking/",
+      trip: thailand
+      )
+
+
+    zurich = Trip.new(
+      name: "Sportive Zurich Trip",
+      hotel_name: "Park Hyatt Zurich",
+      location: "Zurich, Swiss",
+      description: "This modern city-centre hotel with spacious rooms and suites sets out to highlight sophisticated decor and culture.",
+      price_experience: rand(200..1000),
+      link_hotel: "https://zurich.park.hyatt.com/en/hotel/home.html?src=pfxeame_sem_google_zurph_rooms_ww_eng_gen_exact_Google_ZURPH_Rooms_WW_ENG_Gen+Hotel_exact_hotel%20zurich&mckv=sA1Rceui5-dc_pcrid_218128791320_mtid_5297kx13790",
+      user: jakob,
+      category: mountain,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513691503/adltp7ydy1c0kne9gsno.jpg"
+      )
+
+    zurich_breakfast = Activity.new(
+      activity_type: "Breakfast",
+      name: "Cafe Schober",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513857778/breakfast_vnk53d.jpg",
+      description: "Not one to be missed in Zurich",
+      link_activity: "http://www.peclard-zurich.ch/",
+      trip: zurich,
+      )
 
     # new york --------------------------------------------
     new_york = Trip.new(
@@ -216,10 +279,18 @@ dubai_activity.save
 dubai_restaurant.save
 himalaya.save
 himalaya_hike.save
+
 new_york.save
 new_york_restaurant.save
 paris.save
 paris_restaurant.save
+
+canada.save
+canada_hike.save
+thailand.save
+thailand_trekking.save
+zurich.save
+zurich_breakfast.save
 
 
 puts "seeding stops"
