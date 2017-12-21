@@ -223,7 +223,50 @@ users = [martine, emilio, omar, jakob, madi]
       trip: zurich,
       )
 
+    # new york --------------------------------------------
+    new_york = Trip.new(
+      name: "I Love NY",
+      hotel_name: "Trump Hotel",
+      location: "New York",
+      description: "New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers. Besides the architectural delights, New York is an urban jungle that has everything to offer to visitors.",
+      price_experience: rand(200..1000),
+      link_hotel: "https://www.trumphotels.com/central-park",
+      user: emilio,
+      category: city,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513866380/ny_gabiru.jpg"
+      )
 
+     new_york_restaurant = Activity.new(
+      activity_type: "Restaurant",
+      name: "Russ & Daughters Cafe",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513866379/ny_restaurant_ygjbwt.jpg",
+      description: "Undeniably the best pacakes you'll ever have for breakfast are at this place, a whole experience.",
+      link_activity: "http://www.russanddaughterscafe.com/#menu-section",
+      trip: new_york
+      )
+
+     # paris --------------------------------------------
+
+     paris = Trip.new(
+      name: "French Chic",
+      hotel_name: "Le Royal Monceau",
+      location: "Paris",
+      description: "Get ready to see Le Royal Monceau – Raffles Paris turn into a real winter resort inspired by the likes of Val D’Isère, Megève, Courchevel and Gstaad! The snow-covered terrace, combined with an unforgettable concert at the Philharmonie de Paris, will be the perfect city getaway in the heart of the French capital... Your wellbeing will be at the heart of our concerns this winter with the launch of a new offer entirely dedicated to comfort by our My Blend By Clarins Spa. It will also be difficult not to succumb to the sweet treats of Pierre Hermé’s new Royal Afternoon Tea or to the selection of original gift ideas by our Art Bookstore. And what better way to celebrate the end of the year than in one of our gastronomic restaurants?",
+      price_experience: rand(200..1000),
+      link_hotel: "https://www.leroyalmonceau.com/en/",
+      user: emilio,
+      category: city,
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513866382/paris_pyoupo.jpg"
+      )
+
+     paris_restaurant = Activity.new(
+      activity_type: "Restaurant",
+      name: "Matsuhisa Paris",
+      remote_photo_url: "http://res.cloudinary.com/dh46jpozr/image/upload/v1513866381/paris_restaurant_ttfnug.jpg",
+      description: "World renowned Chef Nobu Matsuhisa and Le Royal Monceau – Raffles Paris, a Palace hotel vibrant with culture and inspiration, have partnered to introduce the first Matsuhisa restaurant in France. ",
+      link_activity: "https://www.leroyalmonceau.com/en/talents-chefs/nobu-matsuhisa/",
+      trip: paris
+      )
 
 finland.save
 finland_restaurant.save
@@ -236,12 +279,19 @@ dubai_activity.save
 dubai_restaurant.save
 himalaya.save
 himalaya_hike.save
+
+new_york.save
+new_york_restaurant.save
+paris.save
+paris_restaurant.save
+
 canada.save
 canada_hike.save
 thailand.save
 thailand_trekking.save
 zurich.save
 zurich_breakfast.save
+
 
 puts "seeding stops"
 
